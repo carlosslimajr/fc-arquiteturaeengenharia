@@ -9,7 +9,6 @@ import {
   HeaderWrapper,
   RightContainer,
 } from './styles';
-import logo from 'assets/logo2.jpeg';
 const Header = () => {
   const router = useRouter();
 
