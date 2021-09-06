@@ -30,7 +30,7 @@ const Header = () => {
             <li>Trabalhe Conosco</li>
           </ul>
         </nav>
-        <Button>Peça um orçamento</Button>
+        <Button>PEÇA UM ORÇAMENTO</Button>
       </div>
     </HeaderWrapper>
   );
