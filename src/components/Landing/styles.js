@@ -23,5 +23,9 @@ export const LandingWrapper = styled.div`
     font-size: 48px;
     line-height: 62px;
     color: #982424;
+
+    @media (max-width: 1420px) {
+      font-size: 42px;
+    }
   }
 `;
