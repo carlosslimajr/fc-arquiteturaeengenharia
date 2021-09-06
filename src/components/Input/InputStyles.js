@@ -1,8 +1,8 @@
-import { inputStyleCSS } from 'components/commonStyles';
+// import { inputStyleCSS } from 'components/commonStyles';
 import styled from 'styled-components';
 
 export const InputForm = styled.input`
-  ${inputStyleCSS}
+  /* ${inputStyleCSS} */
 `;
 
 export const InputError = styled.span`

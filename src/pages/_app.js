@@ -8,7 +8,7 @@ import GlobalStyle from '../styles/global';
 import { darkTheme, lightTheme } from '../styles/theme';
 import Header from 'components/Header';
 import 'bootstrap/dist/css/bootstrap.css';
-import fundo from 'assets/fundon.jpeg'
+import fundo from 'assets/fundon.jpeg';
 import Footer from 'components/Footer';
 const MyApp = ({ Component, pageProps, initialValues, tokenValue }) => {
   let token;
@@ -23,10 +23,11 @@ const MyApp = ({ Component, pageProps, initialValues, tokenValue }) => {
     <>
       {/* <img className="background" src={fundo}/> */}
       <ThemeProvider theme={themeMode}>
-        <Header/>
+        <div className="background"/>
+        <Header />
         <Component {...pageProps} />
         <GlobalStyle />
-        <Footer/>
+        <Footer />
       </ThemeProvider>
     </>
   );

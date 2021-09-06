@@ -12,13 +12,17 @@ export const Title = styled.h2`
 `;
 
 export const Subtitle = styled.p`
-font-family: Prompt;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 27px;
-/* or 150% */
+  font-family: Prompt;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  /* or 150% */
 
-
-color: #696871;
-`
+  color: #696871;
+`;
+export const ColoredBlock = styled.div`
+  background: #faf6ed;
+  width: ${props => (props.width ? props.width : '')};
+  height: ${props => (props.height ? props.height : '')};
+`;

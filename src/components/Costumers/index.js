@@ -34,8 +34,9 @@ const Costumer = () => {
         <Title>Alguns dos nossos clientes</Title>
         <Subtitle>
           Grandes marcas, pequenos negócios, novas startups e indivíduos
+          <br/>
+          Estamos prontos para te atender!
         </Subtitle>
-        <Subtitle>Estamos prontos para te atender!</Subtitle>
       </div>
       <div className="downSide">
         <div className="logo">
@@ -56,7 +57,7 @@ const Costumer = () => {
         <div className="logo">
           <img src={boteco} alt="" />
         </div>
-        <div className="logo">
+        {/* <div className="logo">
           <img src={belavista} alt="" />
         </div>
         <div className="logo">
@@ -73,7 +74,7 @@ const Costumer = () => {
         </div>
         <div className="logo">
           <img src={pirao} alt="" />
-        </div>
+        </div> */}
       </div>
     </CostumersWrapper>
   );

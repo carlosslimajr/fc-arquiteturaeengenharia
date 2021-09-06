@@ -14,7 +14,6 @@ body {
   color: ${props => props.theme.colors.text_2};
   font: 400 16px 'Inter', sans-serif;
 
-  
 }
 
 input, textarea, select {
@@ -52,11 +51,13 @@ h1, h2, h3{
     z-index: 20;
   }
 }
-/* .background {
-
-  height: 100vh;
+.background {
+  /* border: 1px solid black; */
+  width: 100%;
+  height: 600px;
+  background: rgba(215, 181, 109, 0.12);
   z-index: -1;
   position: absolute;
   filter: brightness(50%);
-} */
+}
 `;

@@ -15,6 +15,7 @@ const Input = ({
 }) => {
   return (
     <>
+    <label htmlFor={id}>{label}</label>
       <InputForm
         type={type}
         id={id}

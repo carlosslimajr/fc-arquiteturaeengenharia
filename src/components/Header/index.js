@@ -9,7 +9,7 @@ import {
   HeaderWrapper,
   RightContainer,
 } from './styles';
-import logo from 'assets/logo.png'
+import logo from 'assets/logo.png';
 import Button from 'components/Button/Button';
 
 const Header = () => {
@@ -17,15 +17,16 @@ const Header = () => {
 
   return (
     <HeaderWrapper className="container">
-     
       <div className="header">
-         <h5><img src={logo}/></h5>
+        <h5>
+          <img src={logo} />
+        </h5>
         <nav>
           <ul>
-            <li>Quem Somos</li>
-            <li>Serviços</li>
+            <li>Home</li>
+            <li>Quem somos</li>
+            <li>Nossos serviços</li>
             <li>Clientes</li>
-            <li>Fale Conosco</li>
             <li>Trabalhe Conosco</li>
           </ul>
         </nav>
