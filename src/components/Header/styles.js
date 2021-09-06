@@ -24,7 +24,7 @@ export const HeaderWrapper = styled.header`
     nav {
       height: 60px;
       /* border: 1px solid black; */
-      width: 100%;
+      width: 65%;
     }
     ul {
       list-style-type: none;
@@ -35,7 +35,7 @@ export const HeaderWrapper = styled.header`
       align-items: center;
       /* border: 1px solid blue; */
       margin: 0 auto;
-      width: 85%;
+      /* width: 100%; */
 
       li {
         /* border: 1px solid black; */
