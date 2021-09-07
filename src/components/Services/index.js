@@ -8,6 +8,8 @@ import svg from './teste.svg';
 import Button from 'components/Button/Button';
 import { CarouselWrapper } from 'components/CarouselComponent/styles';
 import CarouselComponent from 'components/CarouselComponent';
+import leftButton from 'assets/icons/left.png';
+import rightButton from 'assets/icons/right.png';
 
 const Services = () => {
   const router = useRouter();
@@ -25,7 +27,8 @@ const Services = () => {
           </p>
           <Button>Quero Conhecer</Button>
           <img src={svg} />
-          <button>Esquerda</button> <button>Direita</button>
+          <button className="buttonLeft"><img src={leftButton} alt="" /></button>
+          <button className="buttonRight"><img src={rightButton} alt="" /></button>
         </div>
         <div className="carousel">
           <CarouselComponent />
