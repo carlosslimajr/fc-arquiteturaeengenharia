@@ -56,6 +56,7 @@ h1, h2, h3{
   width: 100%;
   height: 600px;
   background: rgba(215, 181, 109, 0.12);
+
   z-index: -1;
   position: absolute;
   filter: brightness(50%);

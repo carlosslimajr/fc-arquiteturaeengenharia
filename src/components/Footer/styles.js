@@ -4,7 +4,6 @@ export const FooterWrapper = styled.footer`
   width: 100%;
   display: grid;
   padding: 60px;
-  border: 1px solid black;
   font-family: Prompt;
   background: #faf6ed;
   img {
