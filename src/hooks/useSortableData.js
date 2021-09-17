@@ -1,35 +1,35 @@
-const { useState, useMemo } = require('react');
+const { useState, useMemo } = require('react')
 
 export const useSortedData = (items, config = null) => {
-  const [sortConfig, setSortConfig] = useState(config);
+  const [sortConfig, setSortConfig] = useState(config)
 
   const sortedItems = useMemo(() => {
-    const sortableItems = [...items];
+    const sortableItems = [...items]
     if (sortConfig !== null) {
       sortableItems.sort((a, b) => {
         if (a[sortConfig.key] < b[sortConfig.key]) {
-          return sortConfig.direction === 'ascending' ? -1 : 1;
+          return sortConfig.direction === 'ascending' ? -1 : 1
         }
         if (a[sortConfig.key] > b[sortConfig.key]) {
-          return sortConfig.direction === 'ascending' ? 1 : -1;
+          return sortConfig.direction === 'ascending' ? 1 : -1
         }
-        return 0;
-      });
+        return 0
+      })
     }
-    return sortableItems;
-  }, [items, sortConfig]);
+    return sortableItems
+  }, [items, sortConfig])
 
-  const requestSort = key => {
-    let direction = 'ascending';
+  const requestSort = (key) => {
+    let direction = 'ascending'
     if (
       sortConfig &&
       sortConfig.key === key &&
       sortConfig.direction === 'ascending'
     ) {
-      direction = 'descending';
+      direction = 'descending'
     }
-    setSortConfig({ key, direction });
-  };
+    setSortConfig({ key, direction })
+  }
 
-  return { items: sortedItems, requestSort, sortConfig };
-};
+  return { items: sortedItems, requestSort, sortConfig }
+}

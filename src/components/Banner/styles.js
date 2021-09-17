@@ -1,5 +1,4 @@
-/* eslint-disable import/prefer-default-export */
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const BannerWrapper = styled.div`
   margin-top: 120px;
@@ -42,7 +41,5 @@ export const BannerWrapper = styled.div`
     text-align: center;
     color: #34344f;
     margin-top: 15px;
-    
-
   }
-`;
+`

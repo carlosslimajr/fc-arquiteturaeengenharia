@@ -1,6 +1,6 @@
-import React from 'react';
-import { BannerWrapper } from './styles';
-import houseIcon from 'assets/house-icon.png';
+import React from 'react'
+import { BannerWrapper } from './styles'
+import houseIcon from 'assets/house-icon.png'
 const Banner = () => {
   return (
     <BannerWrapper className="container">
@@ -17,7 +17,7 @@ const Banner = () => {
         ou seu negócio
       </p>
     </BannerWrapper>
-  );
-};
+  )
+}
 
-export default Banner;
+export default Banner

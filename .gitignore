@@ -7,7 +7,6 @@
 
 # testing
 /coverage
-/backup-files
 
 # next.js
 /.next/
@@ -18,7 +17,6 @@
 
 # misc
 .DS_Store
-*.pem
 
 # debug
 npm-debug.log*
@@ -26,13 +24,14 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-# vercel
-.vercel
+# sw stuff
+public/sw.js
+public/workbox-*.js
 
-.vscode
+# storybook
+storybook-static
