@@ -7,7 +7,7 @@ import useMediaQuery from 'hooks/useMediaQuery'
 const Contact = () => {
   const mobile = useMediaQuery('(max-width: 991px)')
   return (
-    <ContactWrapper>
+    <ContactWrapper id="trabalhe">
       <div className="container content">
         {!mobile && (
           <div className="leftside">

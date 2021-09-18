@@ -22,7 +22,7 @@ const Costumer = () => {
   const router = useRouter()
 
   return (
-    <CostumersWrapper className="container">
+    <CostumersWrapper className="container" id="clientes">
       <div className="upSide">
         <Title>Alguns dos nossos clientes</Title>
         <Subtitle>

@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 export const LandingWrapper = styled.div`
   height: 48rem;
-  margin-bottom: 10rem;
   position: relative;
+  margin-bottom: 10rem;
 
   h1 {
     font-family: Prompt;
@@ -14,7 +14,11 @@ export const LandingWrapper = styled.div`
     text-align: center;
     color: #982424;
     margin-top: 6rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin: 0 auto; */
   }
   p {
     font-family: Prompt;
@@ -24,6 +28,10 @@ export const LandingWrapper = styled.div`
     line-height: 27px;
     text-align: center;
     color: #34344f;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
   }
   button {
     /* border: 2px solid blue; */
@@ -45,6 +53,7 @@ export const LandingWrapper = styled.div`
       font-size: 48px;
       line-height: 62px;
       /* or 129% */
+      width: 100%;
 
       color: #982424;
     }
@@ -56,6 +65,7 @@ export const LandingWrapper = styled.div`
       font-size: 18px;
       line-height: 27px;
       /* or 150% */
+      width: 100%;
 
       color: #34344f;
     }
@@ -85,5 +95,10 @@ export const LandingWrapper = styled.div`
 
   .image {
     height: 545px;
+  }
+  @media (max-width: 992px) {
+    button {
+      width: 85%;
+    }
   }
 `

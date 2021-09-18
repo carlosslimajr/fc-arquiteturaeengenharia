@@ -5,6 +5,112 @@ export const HeaderWrapper = styled.header`
   height: 120px;
   display: flex;
   justify-content: space-between;
+
+  div.icon-menu {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 3rem;
+    color: #2d4c71;
+  }
+
+  .sideBar {
+    position: fixed;
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: #faf6ed;
+    border: 1px solid black;
+  }
+
+  .sideBar {
+    padding: 5.1rem;
+
+    & > div.top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 7rem;
+      /* border: 1px solid black; */
+    }
+
+    & > div.navigation > a.gradient-box {
+      position: relative;
+
+      width: 90%;
+      height: 6.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: auto;
+      border: double 1.5px transparent;
+      border-radius: 14px;
+      /* border: 1px solid #2d4c71; */
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      /* margin-bottom: 3.2rem; */
+      text-decoration: none;
+
+      font-family: Prompt;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 24px;
+      /* identical to box height, or 133% */
+
+      text-align: right;
+
+      color: #982424;
+
+      & > p {
+        font-weight: 500;
+        font-size: 2rem;
+        background-image: linear-gradient(to left, #4b3f91, #a31462);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        border: 1px solid red;
+      }
+      /* border: 3px solid blue; */
+    }
+
+    div.sider-bar-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 3rem;
+      border-top: 3px solid rgba(75, 63, 145, 0.1);
+
+      & > svg {
+        margin-bottom: 3.6rem;
+      }
+
+      & > div.contact {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 3.2rem;
+
+        & > p {
+          color: ${(props) => props.theme.colors.primary};
+          font-weight: 500;
+          font-size: 1.5rem;
+        }
+      }
+
+      & > div.socials a {
+        margin: 0 2.4rem;
+      }
+    }
+  }
   .mobile {
     /* border: 1px solid blue; */
     padding: 0px 2rem;
@@ -19,7 +125,6 @@ export const HeaderWrapper = styled.header`
     padding: 0;
   }
   .mobilelogo {
-    border: 1px solid black;
     width: 40px;
     height: 40px;
     background-color: #982424;
@@ -51,6 +156,7 @@ export const HeaderWrapper = styled.header`
 
       li {
         /* border: 1px solid black; */
+
         display: flex;
         justify-content: center;
         align-items: center;
@@ -60,10 +166,17 @@ export const HeaderWrapper = styled.header`
         padding: 5px 0px;
         height: 40px;
         line-height: 24px;
-        color: #982424;
-        &:hover {
-          cursor: pointer;
+        a {
           color: #982424;
+
+          cursor: pointer;
+          transition: 0.2s;
+
+          &:hover {
+            cursor: pointer;
+            color: #982424;
+            font-weight: bold;
+          }
         }
       }
     }

@@ -34,6 +34,7 @@ export const ButtonWrapper = styled.button<ButtonProps>`
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
   transition: all 0.2s;
+  max-width: 400px;
   &:hover {
     transition: 0.2s;
     filter: brightness(0.8);

@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
 export const CostumersWrapper = styled.div`
+  /* border: 1px solid black; */
+  @media (max-width: 992px) {
+    margin-top: 8rem !important;
+  }
   .upSide {
     display: flex;
     flex-direction: column;
@@ -8,6 +12,14 @@ export const CostumersWrapper = styled.div`
     align-content: center;
     /* border: 1px solid black; */
     text-align: center;
+    @media (max-width: 992px) {
+      /* width: 95%; */
+      margin: 0 auto;
+      h2 {
+        margin: 0 auto;
+        margin-bottom: 1rem;
+      }
+    }
   }
   .downSide {
     display: grid;

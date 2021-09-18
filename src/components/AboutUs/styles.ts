@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const AboutWrapper = styled.div`
-  margin-bottom: 9.6rem;
+  margin-bottom: 9.6rem !important;
   position: relative;
 
   img {

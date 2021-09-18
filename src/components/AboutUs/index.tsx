@@ -7,7 +7,7 @@ import useMediaQuery from 'hooks/useMediaQuery'
 const AboutUs = () => {
   const mobile = useMediaQuery('(max-width: 991px)')
   return (
-    <AboutWrapper className="container">
+    <AboutWrapper className="container" id="sobre">
       <div className="about">
         <div className="leftside">
           <Title className="title">Quem somos</Title>
