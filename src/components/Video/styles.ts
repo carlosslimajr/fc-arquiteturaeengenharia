@@ -16,13 +16,13 @@ export const VideoWrapper = styled.div`
     margin-right: auto;
     object-fit: contain;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     left: -100px;
     right: 0;
-    top: -40px;
+    top: -50px;
     text-align: center;
 
-    filter: opacity(10%) blur(1px);
+    filter: opacity(15%) blur(0.5px);
     opacity: 1;
   }
 `
