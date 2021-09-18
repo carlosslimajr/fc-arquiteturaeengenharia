@@ -46,23 +46,48 @@ const GlobalStyles = createGlobalStyle`
 
 
   .background {
-  /* border: 1px solid black; */
+
   width: 100%;
   height: 600px;
     background: rgba(215, 181, 109, 0.12);
 
   z-index: -1;
   position: absolute;
-  filter: brightness(50%);
+  /* filter: brightness(50%);  FAF6ED*/
+
 
   @media(max-width:991px){
-    background: url('land.jpg'),rgba(215, 181, 109, 0.12);
+    background: url('land.jpg');
     background-repeat: no-repeat;
-
   background-size: cover;
-  opacity: 0.25;
+  opacity: 8%;
   }
 }
+.background2{
+  width: 100%;
+  height: 600px;
+
+
+  z-index: -1;
+  position: absolute;
+  /* filter: brightness(50%);  FAF6ED*/
+
+
+  @media(max-width:991px){
+    background: rgba(215, 181, 109, 0.12);
+    background-repeat: no-repeat;
+  background-size: cover;
+
+  /* opacity: 0.25; */
+  }
+}
+
+
+/* .container{
+    @media (max-width: 576px) {
+    width: 95%;
+    margin: 0 auto;
+  } */
 
 
 

@@ -8,8 +8,8 @@ const AboutUs = () => {
   const mobile = useMediaQuery('(max-width: 991px)')
   return (
     <AboutWrapper className="container">
-      <div className="row">
-        <div className="col-12 col-lg-6 ">
+      <div className="about">
+        <div className="leftside">
           <Title className="title">Quem somos</Title>
           {mobile && <img src={AboutPic} alt="Foto de quem somos" />}
           <div className="text">
@@ -26,7 +26,7 @@ const AboutUs = () => {
           </div>
         </div>
         {!mobile && (
-          <div className="image col-lg-6">
+          <div className="image col-lg-6 rightside">
             <img src={AboutPic} alt="Foto de quem somos" />
           </div>
         )}

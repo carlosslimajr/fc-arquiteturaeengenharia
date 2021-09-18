@@ -2,8 +2,9 @@ import styled from 'styled-components'
 
 export const LandingWrapper = styled.div`
   height: 48rem;
-  margin-bottom: 8rem;
-  /* border: 1px solid blue; */
+  margin-bottom: 10rem;
+  position: relative;
+
   h1 {
     font-family: Prompt;
     font-style: normal;
@@ -12,7 +13,8 @@ export const LandingWrapper = styled.div`
     line-height: 36px;
     text-align: center;
     color: #982424;
-    margin-top: 5rem;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
   }
   p {
     font-family: Prompt;
@@ -27,39 +29,61 @@ export const LandingWrapper = styled.div`
     /* border: 2px solid blue; */
     margin: 3rem auto;
   }
-  /* background-image: url('contact-background.png'); */
+
+  @media (min-width: 992px) {
+    .leftSide {
+      width: 90%;
+      @media (max-width: 1399px) {
+        width: 100%;
+      }
+    }
+
+    h1 {
+      font-family: Prompt;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 62px;
+      /* or 129% */
+
+      color: #982424;
+    }
+
+    p {
+      font-family: Prompt;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 27px;
+      /* or 150% */
+
+      color: #34344f;
+    }
+    h1,
+    p {
+      text-align: left;
+    }
+    button {
+      margin: 3rem 0 0 0;
+    }
+    .cont {
+      /* border: 1px solid black; */
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 1199px) {
+      /* border: 1px solid black; */
+      h1 {
+        font-size: 34px;
+        line-height: 40px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
   .image {
-    /* position: absolute;
-    z-index: -1;
-    top: -120px;
-    width: 110%;
-    height: 100%;
-    background-position: top; */
-  }
-  /*
-  margin-top: 30px;
-  margin-bottom: 60px;
-  display: grid;
-  grid-template-columns: 40% 60%;
-  .leftSide {
-    display: flex;
-    flex-direction: column;
-    padding: 40px;
-  }
-  img {
-    width: 100%;
     height: 545px;
   }
-  h1 {
-    font-family: Prompt;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 48px;
-    line-height: 62px;
-    color: #982424;
-
-    @media (max-width: 1420px) {
-      font-size: 42px;
-    }
-  } */
 `

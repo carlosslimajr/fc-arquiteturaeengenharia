@@ -7,8 +7,11 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 import GlobalStyles from 'styles/global'
 import { theme } from 'themes/primary'
+import Video from 'components/Video'
+import useMediaQuery from 'hooks/useMediaQuery'
 
 function App({ Component, pageProps }: AppProps) {
+  const mobile = useMediaQuery('(max-width: 991px)')
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -24,7 +27,11 @@ function App({ Component, pageProps }: AppProps) {
           />
         </Head>
         <GlobalStyles />
-        {/* <div className="background" /> */}
+
+        {!mobile && <Video />}
+
+        <div className="background" />
+        <div className="background2" />
         <Header />
         <Component {...pageProps} />
         <Footer />
