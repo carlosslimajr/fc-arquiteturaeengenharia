@@ -2,7 +2,7 @@ import Button from 'components/Button'
 import Checkbox from 'components/CheckBox/CheckBox'
 import Input from 'components/Input'
 import Radio from 'components/Radio/Radio'
-import React from 'react'
+import React, { useState } from 'react'
 import { FormWrapper, RightSide } from './styles'
 
 const Form = () => {
@@ -18,19 +18,25 @@ const Form = () => {
     quantidadeDePavimentos: '',
     tipoDePavimento: '',
     tipoDeProjetos: '',
-    motivoDaProucura: ''
+    motivoDaProcura: ''
   })
 
   const [tipoImovel, setTipoImovel] = React.useState('')
   const [terrenoRegularizado, setTerrenoRegularizado] = React.useState('')
+  const [necessidadeTecnica, setNecessidadeTecnica] = React.useState([])
+  const [tipoPavimento, setTipoPavimento] = useState([])
+  const [tiposDeProjetos, setTiposDeProjetos] = React.useState([])
   // const [cor, setCor] = React.useState('')
 
   function handleClick(e) {
     e.preventDefault()
     console.log('bateu aqui')
+    const allTiposProjetos = tiposDeProjetos.join()
+    const allNecessidadeTec = necessidadeTecnica.join()
+    const allTipoPavimento = tipoPavimento.join()
 
     window.open(
-      `https://api.whatsapp.com/send?phone=5575992604333&text=|NOME:${form.nome}| NUMERO:${form.contato}|EMAIL:${form.email} |ENDEREÇO:${form.endereco}|TIPO DE IMÓVEL:${form.tipoImovel} |NECESSIDADE TÉCNICA:${form.necessidadeTecnica} |ÁREA DO TERRENO: ${form.areaDoTerreno} |TERRENO REGULARIZADO: ${form.terrenoRegularizado} |QUANTIDADE DE PAVIMENTOS: ${form.quantidadeDePavimentos} |TIPOS DE PROJETOS: ${form.tipoDeProjetos} |MOTIVO DE PROCURA: ${form.motivoDaProucura}`
+      `https://api.whatsapp.com/send?phone=5575992604333&text=|*NOME*:${form.nome}| *NUMERO*:${form.contato}|*EMAIL*:${form.email} |*ENDEREÇO*:${form.endereco}|*TIPO DE IMÓVEL*:${tipoImovel} |*NECESSIDADE TÉCNICA*:${allNecessidadeTec} |*ÁREA DO TERRENO*: ${form.areaDoTerreno} |*TERRENO REGULARIZADO*: ${terrenoRegularizado} |*QUANTIDADE DE PAVIMENTOS*: ${form.quantidadeDePavimentos} - ${allTipoPavimento} |*TIPOS DE PROJETOS*: ${allTiposProjetos} |*MOTIVO DE PROCURA*: ${form.motivoDaProcura}`
     )
   }
 
@@ -106,8 +112,8 @@ const Form = () => {
           <div className="checkbox">
             <Checkbox
               options={['Projeto', 'Obra', 'Consultoria', 'Outros']}
-              value={tipoImovel}
-              setValue={setTipoImovel}
+              value={necessidadeTecnica}
+              setValue={setNecessidadeTecnica}
             />
           </div>
           <Input
@@ -116,6 +122,7 @@ const Form = () => {
             value={form.areaDoTerreno}
             onChange={handleChange}
           />
+          {terrenoRegularizado}
           <h5>Terreno regularizado:</h5>
           <div className="checkbox">
             <Radio
@@ -133,20 +140,26 @@ const Form = () => {
           <div className="checkbox row">
             <Checkbox
               options={['Térreo', 'Superior', 'Edifício']}
-              value={tipoImovel}
-              setValue={setTipoImovel}
+              value={tipoPavimento}
+              setValue={setTipoPavimento}
             />
           </div>
           <h5>Tipos de projetos:</h5>
           <div className="checkbox row">
+            {/* {tiposDeProjetos} */}
             <Checkbox
               options={['Reforma', 'Construção', 'Interiores']}
-              value={tipoImovel}
-              setValue={setTipoImovel}
+              value={tiposDeProjetos}
+              setValue={setTiposDeProjetos}
             />
           </div>
-          <h5>Motivo da procura:</h5>
-          <textarea name="" id="" cols={33} rows={10}></textarea>
+          {/* <h5>Motivo da procura:</h5> */}
+          <Input
+            label="Motido da procura:"
+            id="motivoDaProcura"
+            value={form.motivoDaProcura}
+            onChange={handleChange}
+          />
           <Button width="100%">Enviar</Button>
         </form>
         <RightSide className="col-12 col-lg-5">

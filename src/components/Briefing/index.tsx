@@ -1,10 +1,53 @@
 import Button from 'components/Button'
+import Checkbox from 'components/CheckBox/CheckBox'
 import Input from 'components/Input'
+import Radio from 'components/Radio/Radio'
 import React, { useState } from 'react'
 import { FormWrapper, RightSide } from '../Formulario/styles'
 
 const Briefing = () => {
+  const [form, setForm] = useState({
+    faixaEtaria: '',
+    estilo: '',
+    preferenciaMusical: '',
+    preferenciaCinematografica: '',
+    moradores: '',
+    animais: '',
+    hobbies: '',
+    criancas: '',
+    cores: '',
+    estiloArquitetonico: '',
+    valorPretendido: '',
+    prazoMudanca: ''
+  })
+  const [perfilCliente, setPerfilCliente] = useState([])
+  const [ambientes, setAmbientes] = useState([])
+  const [arte, setArte] = useState('')
+  const [religioso, setReligioso] = useState('')
+  const [visita, setVisita] = useState('')
+  const [trabalhaEmCasa, setTrabalhaEmCasa] = useState('')
+  const [plantas, setPlantas] = useState('')
+  const [clima, setClima] = useState('')
+  const [paletaCor, setPaletaCor] = useState('')
   const [stepper, setStepper] = useState(0)
+  const [value, setValue] = useState('')
+
+  function handleChange({ target }) {
+    const { id, value } = target
+    setForm({ ...form, [id]: value })
+  }
+
+  function handleClick(e) {
+    e.preventDefault()
+    console.log('bateu aqui')
+    const allPerfil = perfilCliente.join()
+    const allAmbientes = ambientes.join()
+    // const allTipoPavimento = tipoPavimento.join()
+
+    window.open(
+      `https://api.whatsapp.com/send?phone=5575992604333&text=*PERFIL DO CLIENTE*:${allPerfil} / FAIXA ETÁRIA : ${form.faixaEtaria} / ESTILO: ${form.estilo} / INTERESSE POR ARTE : ${arte} /  PREFERÊNCIA MUSICAL: ${form.preferenciaMusical} / PREFERÊNCIA CINEMATOGRÁFICA: ${form.preferenciaCinematografica} / RELIGIOSO: ${religioso} / QUANTIDADE DE MORADORES: ${form.moradores} / ANIMAIS DOMÉSTICOS: ${form.animais} / HOBBIES PRATICADOS: ${form.hobbies} / COSTUMA RECEBER VISITAS : ${visita} / COSTUMA TRABALHAR EM CASA: ${trabalhaEmCasa} / POSSUI CRIANÇAS: ${form.criancas} / CORES DESEJADAS: ${form.cores} / ESTILO ARQUITETÔNICO ${form.estiloArquitetonico} / GOSTA DE PLANTAS : ${plantas} / PREFERE QUENTE OU FRIO: ${clima} / PALETA DE CORES : ${paletaCor} / VALOR PRETENDIDO: ${form.valorPretendido} / PRAZO PARA MUDANÇA ${form.prazoMudanca} / AMBIENTES : ${ambientes}`
+    )
+  }
 
   const prevStep = (e: any) => {
     if (stepper !== 0) {
@@ -13,7 +56,7 @@ const Briefing = () => {
   }
   const nextStep = (e: any) => {
     e.preventDefault()
-    alert('bateu aqui')
+    // alert('bateu aqui')
     if (stepper < 1) {
       setStepper(stepper + 1)
     }
@@ -45,99 +88,108 @@ const Briefing = () => {
               <h3>Informações Básicas</h3>
               <h5>Perfil do cliente:</h5>
               <div className="checkbox">
-                <div className="box">
-                  <input type="checkbox" name="" id="1" />
-                  <label htmlFor="1">Família</label>
-                </div>
-                <div className="box">
-                  <input type="checkbox" name="" id="2" />
-                  <label htmlFor="2">Jovem</label>
-                </div>
-                <div className="box">
-                  <input type="checkbox" name="" id="3" />
-                  <label htmlFor="3">Recém casado</label>
-                </div>
-                <div className="box">
-                  <input type="checkbox" name="" id="4" />
-                  <label htmlFor="4">Terceira idade</label>
-                </div>
-                <div className="box">
-                  <input type="checkbox" name="" id="4" />
-                  <label htmlFor="4">Solteiro</label>
-                </div>
+                <Checkbox
+                  options={[
+                    'Família',
+                    'Jovem',
+                    'Recém casado',
+                    'Terceira Idade',
+                    'Solteiro'
+                  ]}
+                  value={perfilCliente}
+                  setValue={setPerfilCliente}
+                />
               </div>
-              <Input label="Faixa etária:" placeholder="18, 25, 35..." />
+              <Input
+                label="Faixa etária:"
+                placeholder="18, 25, 35..."
+                id="faixaEtaria"
+                value={form.faixaEtaria}
+                onChange={handleChange}
+              />
               <Input
                 label="Estilo:"
                 placeholder="Moderno, clássico, art deco..."
+                id="estilo"
+                value={form.estilo}
+                onChange={handleChange}
               />
               <h3>Questões Culturais:</h3>
               <h5>Você se interessa por arte?</h5>
               <div className="checkbox">
-                <div className="box">
-                  <input type="checkbox" name="" id="1" />
-                  <label htmlFor="1">Sim</label>
-                </div>
-                <div className="box">
-                  <input type="checkbox" name="" id="2" />
-                  <label htmlFor="2">Não</label>
-                </div>
+                <Radio
+                  options={['Sim', 'Não']}
+                  value={arte}
+                  setValue={setArte}
+                />
               </div>
               <Input
                 label="Preferência musical:"
                 placeholder="Pagode, sertanejo, rock, clássica"
+                value={form.preferenciaMusical}
+                id="preferenciaMusical"
+                onChange={handleChange}
               />
               <Input
                 label="Preferência cinematográfica:"
                 placeholder="Aventura, terror, romance..."
+                value={form.preferenciaCinematografica}
+                id="preferenciaCinematografica"
+                onChange={handleChange}
               />
-              <h5>Se considera religioso??</h5>
+              <h5>Se considera religioso?</h5>
               <div className="checkbox">
-                <div className="box">
-                  <input type="checkbox" name="" id="1" />
-                  <label htmlFor="1">Sim</label>
-                </div>
-                <div className="box">
-                  <input type="checkbox" name="" id="2" />
-                  <label htmlFor="2">Não</label>
-                </div>
+                <Radio
+                  options={['Sim', 'Não']}
+                  value={religioso}
+                  setValue={setReligioso}
+                />
               </div>
               <h3>Ambiente familiar:</h3>
               <Input
                 label="Quantos moradores há na casa?"
                 placeholder="1, 2, 3..."
+                value={form.moradores}
+                id="moradores"
+                onChange={handleChange}
               />
               <Input
                 label="Possui animais domésticos?"
                 placeholder="Cachorro, gato, passarinho..."
+                value={form.animais}
+                id="animais"
+                onChange={handleChange}
               />
               <Input
                 label="Hobbies praticados?"
                 placeholder="Pesca, música, ballet..."
+                value={form.hobbies}
+                id="hobbies"
+                onChange={handleChange}
               />
               <h5>Costuma receber visitas?</h5>
               <div className="checkbox">
-                <div className="box">
-                  <input type="checkbox" name="" id="1" />
-                  <label htmlFor="1">Sim</label>
-                </div>
-                <div className="box">
-                  <input type="checkbox" name="" id="2" />
-                  <label htmlFor="2">Não</label>
-                </div>
+                <Radio
+                  options={['Sim', 'Não']}
+                  value={visita}
+                  setValue={setVisita}
+                />
               </div>
               <h5>Costuma trabalhar em casa?</h5>
               <div className="checkbox">
-                <div className="box">
-                  <input type="checkbox" name="" id="1" />
-                  <label htmlFor="1">Sim</label>
-                </div>
-                <div className="box">
-                  <input type="checkbox" name="" id="2" />
-                  <label htmlFor="2">Não</label>
-                </div>
+                <Radio
+                  options={['Sim', 'Não']}
+                  value={trabalhaEmCasa}
+                  setValue={setTrabalhaEmCasa}
+                />
               </div>
-              <Input label="Possui crianças?" placeholder="2 crianças" />
+              <Input
+                label="Possui crianças?"
+                placeholder="2 crianças"
+                value={form.criancas}
+                id="criancas"
+                onChange={handleChange}
+              />
               <Button width="100%" onClick={(e) => nextStep(e)}>
                 Próximo
               </Button>
@@ -149,108 +201,81 @@ const Briefing = () => {
               <Input
                 label="Cores desejadas"
                 placeholder="Verde, preto, azul marinho..."
+                value={form.cores}
+                id="cores"
+                onChange={handleChange}
               />
               <Input
                 label="Estilo arquitetônico de afinidade:"
                 placeholder="Barroco, clássico, gótico..."
+                value={form.estiloArquitetonico}
+                id="estiloArquitetonico"
+                onChange={handleChange}
               />
               <h5>Gosta de plantas?</h5>
               <div className="checkbox">
-                <div className="box">
-                  <input type="checkbox" name="" id="1" />
-                  <label htmlFor="1">Sim</label>
-                </div>
-                <div className="box">
-                  <input type="checkbox" name="" id="2" />
-                  <label htmlFor="2">Não</label>
-                </div>
+                <Radio
+                  options={['Sim', 'Não']}
+                  value={plantas}
+                  setValue={setPlantas}
+                />
               </div>
               <h5>Prefere quente ou frio ?</h5>
               <div className="checkbox">
-                <div className="box">
-                  <input type="checkbox" name="" id="1" />
-                  <label htmlFor="1">Sim</label>
-                </div>
-                <div className="box">
-                  <input type="checkbox" name="" id="2" />
-                  <label htmlFor="2">Não</label>
-                </div>
+                <Radio
+                  options={['Sim', 'Não']}
+                  value={clima}
+                  setValue={setClima}
+                />
               </div>
               <h5>Paleta de cores ?</h5>
               <div className="checkbox">
-                <div className="box">
-                  <input type="checkbox" name="" id="1" />
-                  <label htmlFor="1">Escura</label>
-                </div>
-                <div className="box">
-                  <input type="checkbox" name="" id="2" />
-                  <label htmlFor="2">Clara</label>
-                </div>
+                <Radio
+                  options={['Escura', 'Clara']}
+                  value={paletaCor}
+                  setValue={setPaletaCor}
+                />
               </div>
               <Input
                 label="Valor pretendido para investimento"
                 placeholder="R$ 10.123,56...."
+                value={form.valorPretendido}
+                id="valorPretendido"
+                onChange={handleChange}
               />
-              <Input label="Prazo para mudança" placeholder="30 dias..." />
+              <Input
+                label="Prazo para mudança"
+                placeholder="30 dias..."
+                value={form.prazoMudanca}
+                id="prazoMudanca"
+                onChange={handleChange}
+              />
               <h3>Ambientes</h3>
               <div className="checkbox">
-                <div className="box">
-                  <input type="checkbox" name="" id="1" />
-                  <label htmlFor="1">Sala de estar</label>
-                </div>
-                <div className="box">
-                  <input type="checkbox" name="" id="2" />
-                  <label htmlFor="2">Sala de jantar</label>
-                </div>
-                <div className="box">
-                  <input type="checkbox" name="" id="1" />
-                  <label htmlFor="1">Sala de de vídeos</label>
-                </div>
-                <div className="box">
-                  <input type="checkbox" name="" id="2" />
-                  <label htmlFor="2">Hall</label>
-                </div>
-                <div className="box">
-                  <input type="checkbox" name="" id="1" />
-                  <label htmlFor="1">Gourmet</label>
-                </div>
-                <div className="box">
-                  <input type="checkbox" name="" id="2" />
-                  <label htmlFor="2">Closet</label>
-                </div>
-                <div className="box">
-                  <input type="checkbox" name="" id="1" />
-                  <label htmlFor="1">Cozinha</label>
-                </div>
-                <div className="box">
-                  <input type="checkbox" name="" id="2" />
-                  <label htmlFor="2">Escritório</label>
-                </div>
-                <div className="box">
-                  <input type="checkbox" name="" id="1" />
-                  <label htmlFor="1">Varanda</label>
-                </div>
-                <div className="box">
-                  <input type="checkbox" name="" id="2" />
-                  <label htmlFor="2">Lavabo</label>
-                </div>
-                <div className="box">
-                  <input type="checkbox" name="" id="1" />
-                  <label htmlFor="1">Banheiro social</label>
-                </div>
-                <div className="box">
-                  <input type="checkbox" name="" id="2" />
-                  <label htmlFor="2">Suíte</label>
-                </div>
-                <div className="box">
-                  <input type="checkbox" name="" id="1" />
-                  <label htmlFor="1">Quarto</label>
-                </div>
-                <div className="box">
-                  <input type="checkbox" name="" id="2" />
-                  <label htmlFor="2">Garagem</label>
-                </div>
+                <Checkbox
+                  options={[
+                    'Sala de estar',
+                    'Sala de Jantar',
+                    'Sala de Videos',
+                    'Hall',
+                    'Gourmet',
+                    'Closet',
+                    'Cozinha',
+                    'Escritório',
+                    'Varanda',
+                    'Lavabo',
+                    'Banheiro Social',
+                    'Suíte',
+                    'Quarto',
+                    'Garagem'
+                  ]}
+                  value={ambientes}
+                  setValue={setAmbientes}
+                />
               </div>
+              <Button width="100%" onClick={(e) => handleClick(e)}>
+                Próximo
+              </Button>
             </>
           )}
         </form>
