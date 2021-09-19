@@ -1,11 +1,56 @@
 import Button from 'components/Button'
+import Checkbox from 'components/CheckBox/CheckBox'
 import Input from 'components/Input'
+import Radio from 'components/Radio/Radio'
 import React from 'react'
 import { FormWrapper, RightSide } from './styles'
 
 const Form = () => {
+  const [form, setForm] = React.useState({
+    nome: '',
+    contato: '',
+    email: '',
+    endereco: '',
+    tipoImovel: '',
+    necessidadeTecnica: '',
+    areaDoTerreno: '',
+    terrenoRegularizado: '',
+    quantidadeDePavimentos: '',
+    tipoDePavimento: '',
+    tipoDeProjetos: '',
+    motivoDaProucura: ''
+  })
+
+  const [tipoImovel, setTipoImovel] = React.useState('')
+  const [terrenoRegularizado, setTerrenoRegularizado] = React.useState('')
+  // const [cor, setCor] = React.useState('')
+
+  function handleClick(e) {
+    e.preventDefault()
+    console.log('bateu aqui')
+
+    window.open(
+      `https://api.whatsapp.com/send?phone=5575992604333&text=|NOME:${form.nome}| NUMERO:${form.contato}|EMAIL:${form.email} |ENDEREÇO:${form.endereco}|TIPO DE IMÓVEL:${form.tipoImovel} |NECESSIDADE TÉCNICA:${form.necessidadeTecnica} |ÁREA DO TERRENO: ${form.areaDoTerreno} |TERRENO REGULARIZADO: ${form.terrenoRegularizado} |QUANTIDADE DE PAVIMENTOS: ${form.quantidadeDePavimentos} |TIPOS DE PROJETOS: ${form.tipoDeProjetos} |MOTIVO DE PROCURA: ${form.motivoDaProucura}`
+    )
+  }
+
+  function handleChange({ target }) {
+    const { id, value } = target
+    setForm({ ...form, [id]: value })
+  }
+
+  function handleCheckBox({ target }) {
+    // set
+    console.log('target here')
+    console.log(target.value)
+  }
   return (
-    <FormWrapper className="container">
+    <FormWrapper
+      className="container"
+      onSubmit={(e) => {
+        handleClick(e)
+      }}
+    >
       <div className="row justify-content-center gx-5">
         <div className="title col-12 col-md-8">
           <h1>Formulário de acesso livre</h1>
@@ -20,91 +65,85 @@ const Form = () => {
         <form action="" className="col-12 col-lg-7">
           <h3>Informações Básicas</h3>
 
-          <Input label="Nome completo:" />
-          <Input label="Número de Contato:" />
-          <Input label="E-mail:" />
-          <Input label="Endereço:" />
+          <Input
+            label="Nome completo:"
+            id="nome"
+            value={form.nome}
+            onChange={handleChange}
+          />
+          <Input
+            label="Número de Contato:"
+            id="contato"
+            value={form.contato}
+            onChange={handleChange}
+          />
+          <Input
+            label="E-mail:"
+            id="email"
+            value={form.email}
+            onChange={handleChange}
+          />
+          <Input
+            label="Endereço:"
+            id="endereco"
+            value={form.endereco}
+            onChange={handleChange}
+          />
+
           <h3>Questões de uso</h3>
           {/* {FAZ UM COMPONENTE DISSO AQUI PELO AMOR DE DEUS} */}
           <h5>Tipo de imóvel:</h5>
+
           <div className="checkbox">
-            <div className="box">
-              <input type="checkbox" name="" id="1" />
-              <label htmlFor="1">Residencial</label>
-            </div>
-            <div className="box">
-              <input type="checkbox" name="" id="2" />
-              <label htmlFor="2">Comercial</label>
-            </div>
-            <div className="box">
-              <input type="checkbox" name="" id="3" />
-              <label htmlFor="3">Industrial</label>
-            </div>
-            <div className="box">
-              <input type="checkbox" name="" id="4" />
-              <label htmlFor="4">Misto</label>
-            </div>
+            {/* {tipoImovel} */}
+            <Radio
+              options={['Residencial', 'Comercial', 'Industrial', 'Misto']}
+              value={tipoImovel}
+              setValue={setTipoImovel}
+            />
           </div>
           <h5>Necessidade técnica:</h5>
           <div className="checkbox">
-            <div className="box">
-              <input type="checkbox" name="" id="1" />
-              <label htmlFor="1">Projeto</label>
-            </div>
-            <div className="box">
-              <input type="checkbox" name="" id="2" />
-              <label htmlFor="2">Obra</label>
-            </div>
-            <div className="box">
-              <input type="checkbox" name="" id="3" />
-              <label htmlFor="3">Consultoria</label>
-            </div>
-            <div className="box">
-              <input type="checkbox" name="" id="4" />
-              <label htmlFor="4">Outros</label>
-            </div>
+            <Checkbox
+              options={['Projeto', 'Obra', 'Consultoria', 'Outros']}
+              value={tipoImovel}
+              setValue={setTipoImovel}
+            />
           </div>
-          <Input label="Área do terreno:" />
+          <Input
+            label="Área do terreno:"
+            id="areaDoTerreno"
+            value={form.areaDoTerreno}
+            onChange={handleChange}
+          />
           <h5>Terreno regularizado:</h5>
           <div className="checkbox">
-            <div className="box">
-              <input type="checkbox" name="" id="1" />
-              <label htmlFor="1">Sim</label>
-            </div>
-            <div className="box">
-              <input type="checkbox" name="" id="2" />
-              <label htmlFor="2">Não</label>
-            </div>
+            <Radio
+              options={['Sim', 'Não']}
+              value={terrenoRegularizado}
+              setValue={setTerrenoRegularizado}
+            />
           </div>
-          <Input label="Quantidade de pavimentos:" />
+          <Input
+            label="Quantidade de pavimentos:"
+            id="quantidadeDePavimentos"
+            value={form.quantidadeDePavimentos}
+            onChange={handleChange}
+          />
           <div className="checkbox row">
-            <div className="box">
-              <input type="checkbox" name="" id="1" />
-              <label htmlFor="1">Térreo</label>
-            </div>
-            <div className="box">
-              <input type="checkbox" name="" id="2" />
-              <label htmlFor="2">Superior</label>
-            </div>
-            <div className="box">
-              <input type="checkbox" name="" id="2" />
-              <label htmlFor="2">Edifício</label>
-            </div>
+            <Checkbox
+              options={['Térreo', 'Superior', 'Edifício']}
+              value={tipoImovel}
+              setValue={setTipoImovel}
+            />
           </div>
           <h5>Tipos de projetos:</h5>
           <div className="checkbox row">
-            <div className="box">
-              <input type="checkbox" name="" id="1" />
-              <label htmlFor="1">Reforma</label>
-            </div>
-            <div className="box">
-              <input type="checkbox" name="" id="2" />
-              <label htmlFor="2">Construção</label>
-            </div>
-            <div className="box">
-              <input type="checkbox" name="" id="3" />
-              <label htmlFor="3">Interiores</label>
-            </div>
+            <Checkbox
+              options={['Reforma', 'Construção', 'Interiores']}
+              value={tipoImovel}
+              setValue={setTipoImovel}
+            />
           </div>
           <h5>Motivo da procura:</h5>
           <textarea name="" id="" cols={33} rows={10}></textarea>

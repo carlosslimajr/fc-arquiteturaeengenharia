@@ -9,9 +9,11 @@ import GlobalStyles from 'styles/global'
 import { theme } from 'themes/primary'
 import Video from 'components/Video'
 import useMediaQuery from 'hooks/useMediaQuery'
+import { useRouter } from 'next/router'
 
 function App({ Component, pageProps }: AppProps) {
   const mobile = useMediaQuery('(max-width: 991px)')
+  const { pathname } = useRouter()
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -28,10 +30,15 @@ function App({ Component, pageProps }: AppProps) {
         </Head>
         <GlobalStyles />
 
-        {!mobile && <Video />}
+        {!mobile && pathname === '/' && <Video />}
 
-        <div className="background" />
-        <div className="background2" />
+        {pathname === '/' && (
+          <>
+            <div className="background" />
+            <div className="background2" />
+          </>
+        )}
+
         <Header />
         <Component {...pageProps} />
         <Footer />

@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 
 import { CostumersWrapper } from './styles'
 import logo from 'assets/logo.png'
@@ -17,40 +17,94 @@ import bahia from 'assets/costumers/bahia.png'
 import anascimento from 'assets/costumers/anascimento.png'
 import alphaville from 'assets/costumers/alphaville.png'
 import aloha from 'assets/costumers/aloha.png'
+import { motion } from 'framer-motion'
 
-const Costumer = () => {
-  const router = useRouter()
+const Costumer: React.FC = () => {
+  const [isCardsSectionCardsVisible, setIsCardsSectionVisible] =
+    useState<boolean>(false)
+  const cardsSectionRef = useRef<HTMLDivElement>(null)
+
+  const getSectionPosition = useCallback(() => {
+    const { y } = cardsSectionRef.current?.getBoundingClientRect()
+    const elementPosition = cardsSectionRef.current?.offsetTop
+
+    if (y <= elementPosition * 1.9) {
+      setIsCardsSectionVisible(true)
+    }
+  }, [])
+
+  const removeGetSectionPosition = useCallback(
+    () => window.removeEventListener('scroll', getSectionPosition),
+    [getSectionPosition]
+  )
+
+  useEffect(() => {
+    if (!isCardsSectionCardsVisible) {
+      getSectionPosition()
+      window.addEventListener('scroll', getSectionPosition)
+    } else {
+      removeGetSectionPosition()
+    }
+
+    return () => removeGetSectionPosition()
+  }, [getSectionPosition, isCardsSectionCardsVisible, removeGetSectionPosition])
 
   return (
     <CostumersWrapper className="container" id="clientes">
-      <div className="upSide">
-        <Title>Alguns dos nossos clientes</Title>
-        <Subtitle>
-          Grandes marcas, pequenos negócios, novas startups e indivíduos
-          <br />
-          <strong> Estamos prontos para te atender!</strong>
-        </Subtitle>
-      </div>
-      <div className="downSide">
-        <div className="logo">
-          <img src={ebateca} alt="" />
+      <motion.div
+        className="sec-two"
+        initial="right"
+        ref={cardsSectionRef}
+        animate={isCardsSectionCardsVisible && { x: 0, opacity: 1 }}
+        transition={{ ease: 'easeOut', duration: 0.7 }}
+        variants={{
+          right: {
+            x: -100,
+            opacity: 0
+          }
+        }}
+      >
+        <div className="upSide">
+          <Title>Alguns dos nossos clientes</Title>
+          <Subtitle>
+            Grandes marcas, pequenos negócios, novas startups e indivíduos
+            <br />
+            <strong> Estamos prontos para te atender!</strong>
+          </Subtitle>
         </div>
-        <div className="logo">
-          <img src={vogue} alt="" />
-        </div>
-        <div className="logo">
-          <img src={versatile} alt="" />
-        </div>
-        <div className="logo">
-          <img src={dom} alt="" />
-        </div>
-        <div className="logo">
-          <img src={london} alt="" />
-        </div>
-        <div className="logo">
-          <img src={boteco} alt="" />
-        </div>
-        {/* <div className="logo">
+      </motion.div>
+      <motion.div
+        className="sec-two"
+        initial="right"
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ ease: 'backIn', duration: 1 }}
+        variants={{
+          right: {
+            x: 100,
+            opacity: 0
+          }
+        }}
+      >
+        <div className="downSide">
+          <div className="logo">
+            <img src={ebateca} alt="" />
+          </div>
+          <div className="logo">
+            <img src={vogue} alt="" />
+          </div>
+          <div className="logo">
+            <img src={versatile} alt="" />
+          </div>
+          <div className="logo">
+            <img src={dom} alt="" />
+          </div>
+          <div className="logo">
+            <img src={london} alt="" />
+          </div>
+          <div className="logo">
+            <img src={boteco} alt="" />
+          </div>
+          {/* <div className="logo">
           <img src={belavista} alt="" />
         </div>
         <div className="logo">
@@ -68,7 +122,8 @@ const Costumer = () => {
         <div className="logo">
           <img src={pirao} alt="" />
         </div> */}
-      </div>
+        </div>
+      </motion.div>
     </CostumersWrapper>
   )
 }

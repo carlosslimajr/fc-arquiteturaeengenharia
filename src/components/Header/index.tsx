@@ -71,23 +71,25 @@ const Header = () => {
             <nav>
               <ul>
                 <li>
-                  <a href="#inicio">Home</a>
+                  <Link href="/#inicio">Home</Link>
                 </li>
                 <li>
-                  <a href="#sobre">Quem somos</a>
+                  <Link href="/#sobre">Quem somos</Link>
                 </li>
                 <li>
-                  <a href="#servicos">Nossos serviços</a>
+                  <Link href="/#servicos">Nossos serviços</Link>
                 </li>
                 <li>
-                  <a href="#clientes">Clientes</a>
+                  <Link href="/#clientes">Clientes</Link>
                 </li>
                 <li>
-                  <a href="#trabalhe">Trabalhe Conosco</a>
+                  <Link href="#trabalhe">Trabalhe Conosco</Link>
                 </li>
               </ul>
             </nav>
-            <Button>PEÇA UM ORÇAMENTO</Button>
+            <Link href="/formulario">
+              <Button>PEÇA UM ORÇAMENTO</Button>
+            </Link>
           </>
         )}
 
@@ -133,7 +135,7 @@ const Header = () => {
               animate="visible"
               variants={nav}
             >
-              <Link href="#inicio">
+              <Link href="/#inicio">
                 <motion.a
                   variants={items}
                   // style={{ fontWeight: pathname === '/sobre' && 700 }}
@@ -143,7 +145,7 @@ const Header = () => {
                   Inicio <RightArrow />
                 </motion.a>
               </Link>
-              <Link href="#sobre">
+              <Link href="/#sobre">
                 <motion.a
                   variants={items}
                   // style={{ fontWeight: pathname === '/parceiros' && 700 }}
@@ -153,7 +155,7 @@ const Header = () => {
                   Quem somos <RightArrow />
                 </motion.a>
               </Link>
-              <Link href="#servicos">
+              <Link href="/#servicos">
                 <motion.a
                   variants={items}
                   // style={{ fontWeight: pathname === '/parceiros' && 700 }}
@@ -163,7 +165,7 @@ const Header = () => {
                   Nossos serviços <RightArrow />
                 </motion.a>
               </Link>
-              <Link href="#clientes">
+              <Link href="/#clientes">
                 <motion.a
                   variants={items}
                   // style={{ fontWeight: pathname === '/parceiros' && 700 }}

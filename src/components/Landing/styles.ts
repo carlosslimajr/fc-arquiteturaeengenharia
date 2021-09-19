@@ -94,7 +94,12 @@ export const LandingWrapper = styled.div`
   }
 
   .image {
-    height: 545px;
+    /* border: 3px solid black; */
+    /* height: 545px; */
+    img {
+      height: 500px;
+      /* display: none; */
+    }
   }
   @media (max-width: 992px) {
     button {

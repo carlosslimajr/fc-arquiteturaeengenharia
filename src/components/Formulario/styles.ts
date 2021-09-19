@@ -13,6 +13,18 @@ export const FormWrapper = styled.main`
       padding: 80px 90px;
     }
   }
+  .radio {
+    /* border: 1px solid black; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    input {
+      border: 2px solid black !important;
+      width: 25px;
+      height: 25px;
+      color: black;
+    }
+  }
 
   .step {
     /* border: 1px solid black; */
@@ -145,7 +157,11 @@ export const FormWrapper = styled.main`
     }
     .box {
       display: flex;
+      align-items: center;
       margin-bottom: 2.5rem;
+      label {
+        display: flex;
+      }
     }
   }
 `
