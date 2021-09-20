@@ -29,7 +29,7 @@ const AboutUs: React.FC = () => {
   const cardsSectionRef = useRef<HTMLDivElement>(null)
 
   const getSectionPosition = useCallback(() => {
-    const { y } = cardsSectionRef.current.getBoundingClientRect()
+    const { y } = cardsSectionRef.current?.getBoundingClientRect()
     // const elementPosition = cardsSectionRef.current?.offsetTop
     if (y <= 700) {
       setIsCardsSectionVisible(true)
@@ -55,11 +55,17 @@ const AboutUs: React.FC = () => {
   return (
     <AboutWrapper className="container" id="sobre">
       <motion.div
-        className="sec-two"
         ref={cardsSectionRef}
         initial="hidden"
-        animate={isCardsSectionCardsVisible && 'visible'}
-        variants={wrapper}
+        animate={isCardsSectionCardsVisible && { y: 0, opacity: 1 }}
+        transition={{ ease: 'easeOut', duration: 0.5 }}
+        variants={{
+          hidden: {
+            // x: 100,
+            opacity: 0,
+            y: -150
+          }
+        }}
       >
         <div className="about">
           <div className="leftside">
@@ -78,6 +84,7 @@ const AboutUs: React.FC = () => {
               </p>
             </div>
           </div>
+
           {!mobile && (
             <div className="image col-lg-6 rightside">
               <img src={AboutPic} alt="Foto de quem somos" />

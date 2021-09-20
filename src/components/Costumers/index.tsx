@@ -20,6 +20,18 @@ import aloha from 'assets/costumers/aloha.png'
 import { motion } from 'framer-motion'
 
 const Costumer: React.FC = () => {
+  const clienteRef = React.useRef(null)
+
+  // setInterval(() => {
+  //   if (clienteRef) {
+  //     if (clienteRef.current) {
+  //       const current = clienteRef.current.scrollLeft
+  //       clienteRef.current.scrollTo(current + 10, 0)
+  //       console.log(current)
+  //     }
+  //   }
+  // }, 100)
+
   const [isCardsSectionCardsVisible, setIsCardsSectionVisible] =
     useState<boolean>(false)
   const cardsSectionRef = useRef<HTMLDivElement>(null)
@@ -52,15 +64,15 @@ const Costumer: React.FC = () => {
   return (
     <CostumersWrapper className="container" id="clientes">
       <motion.div
-        className="sec-two"
-        initial="right"
         ref={cardsSectionRef}
-        animate={isCardsSectionCardsVisible && { x: 0, opacity: 1 }}
-        transition={{ ease: 'easeOut', duration: 0.7 }}
+        initial="right"
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ ease: 'easeOut', duration: 0.5 }}
         variants={{
           right: {
-            x: -100,
-            opacity: 0
+            // x: 100,
+            opacity: 0,
+            y: -100
           }
         }}
       >
@@ -77,7 +89,7 @@ const Costumer: React.FC = () => {
         className="sec-two"
         initial="right"
         animate={{ x: 0, opacity: 1 }}
-        transition={{ ease: 'backIn', duration: 1 }}
+        transition={{ ease: 'easeOut', duration: 0.5 }}
         variants={{
           right: {
             x: 100,
@@ -85,7 +97,7 @@ const Costumer: React.FC = () => {
           }
         }}
       >
-        <div className="downSide">
+        <div className="downSide" ref={clienteRef}>
           <div className="logo">
             <img src={ebateca} alt="" />
           </div>

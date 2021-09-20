@@ -27,7 +27,6 @@ export const HeaderWrapper = styled.header`
     bottom: 0;
     z-index: 999;
     background-color: #faf6ed;
-    border: 1px solid black;
   }
 
   .sideBar {

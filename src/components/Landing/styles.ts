@@ -97,7 +97,7 @@ export const LandingWrapper = styled.div`
     /* border: 3px solid black; */
     /* height: 545px; */
     img {
-      height: 500px;
+      height: 520px;
       /* display: none; */
     }
   }

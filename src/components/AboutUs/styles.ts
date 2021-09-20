@@ -4,6 +4,7 @@ export const AboutWrapper = styled.div`
   margin-bottom: 9.6rem !important;
   position: relative;
 
+  /* border: 1px solid black; */
   img {
     width: 80%;
     margin: 0 auto;

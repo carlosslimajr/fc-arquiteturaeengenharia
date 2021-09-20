@@ -50,11 +50,17 @@ const Banner = () => {
 
   return (
     <motion.div
-      className="sec-two"
       ref={cardsSectionRef}
       initial="hidden"
-      animate={isCardsSectionCardsVisible && 'visible'}
-      variants={wrapper}
+      animate={isCardsSectionCardsVisible && { y: 0, opacity: 1 }}
+      transition={{ ease: 'easeOut', duration: 0.5 }}
+      variants={{
+        hidden: {
+          // x: 100,
+          opacity: 0,
+          y: 150
+        }
+      }}
     >
       <BannerWrapper className="container">
         <div className="iconBackground">

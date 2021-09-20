@@ -34,19 +34,18 @@ const Landing = () => {
 
   return (
     <LandingWrapper className="container">
-      <motion.div
-        className="sec-two"
-        initial="right"
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ ease: 'easeOut', duration: 0.5 }}
-        variants={{
-          right: {
-            x: 100,
-            opacity: 0
-          }
-        }}
-      >
-        <div className="row cont">
+      <div className="row cont">
+        <motion.div
+          initial="right"
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ ease: 'easeOut', duration: 0.5 }}
+          variants={{
+            right: {
+              x: -100,
+              opacity: 0
+            }
+          }}
+        >
           <div className="leftSide">
             <h1>Trazemos sempre a melhor solução para seu projeto</h1>
             <p>
@@ -57,6 +56,18 @@ const Landing = () => {
               <Button>Peça um orçamento</Button>
             </Link>
           </div>
+        </motion.div>
+        <motion.div
+          initial="right"
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ ease: 'easeOut', duration: 0.5 }}
+          variants={{
+            right: {
+              x: 100,
+              opacity: 0
+            }
+          }}
+        >
           <div className="d-none d-lg-block image">
             <img src={Foto} alt="" />
             {/* <Image
@@ -67,8 +78,8 @@ const Landing = () => {
             className="imagi"
           /> */}
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </LandingWrapper>
   )
 }
