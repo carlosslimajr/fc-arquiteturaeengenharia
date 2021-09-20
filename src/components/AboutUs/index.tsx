@@ -31,7 +31,7 @@ const AboutUs: React.FC = () => {
   const getSectionPosition = useCallback(() => {
     const { y } = cardsSectionRef.current?.getBoundingClientRect()
     // const elementPosition = cardsSectionRef.current?.offsetTop
-    if (y <= 700) {
+    if (y <= 600) {
       setIsCardsSectionVisible(true)
     }
   }, [])
@@ -63,7 +63,7 @@ const AboutUs: React.FC = () => {
           hidden: {
             // x: 100,
             opacity: 0,
-            y: -150
+            y: 150
           }
         }}
       >

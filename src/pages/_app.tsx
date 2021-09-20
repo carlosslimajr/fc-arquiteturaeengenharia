@@ -1,10 +1,9 @@
-import Footer from 'components/Footer'
+import 'bootstrap/dist/css/bootstrap.css'
 import Header from 'components/Header'
+import Footer from 'components/Footer'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 import { ThemeProvider } from 'styled-components'
-import 'bootstrap/dist/css/bootstrap.css'
-
 import GlobalStyles from 'styles/global'
 import { theme } from 'themes/primary'
 import Video from 'components/Video'

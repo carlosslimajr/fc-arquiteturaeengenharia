@@ -30,6 +30,7 @@ const Services = () => {
             plugins={[
               'clickToChange',
               'centered',
+              'infinite',
               {
                 resolve: slidesToShowPlugin,
                 options: {
