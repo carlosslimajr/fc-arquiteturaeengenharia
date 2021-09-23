@@ -36,8 +36,9 @@ export const ButtonWrapper = styled.button<ButtonProps>`
   transition: all 0.2s;
   max-width: 400px;
   &:hover {
-    transition: 0.2s;
-    filter: brightness(0.8);
-    transform: scale(1.03);
+    transform: scale(1.05);
+    /* border: 1px solid; */
+    border-radius: 10px;
+    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
   }
 `

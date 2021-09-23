@@ -12,8 +12,8 @@ export default function Home() {
       <Landing />
       <Costumer />
       <AboutUs />
-      <Services />
       <Banner />
+      <Services />
     </>
   )
 }
