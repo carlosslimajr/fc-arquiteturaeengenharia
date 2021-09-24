@@ -55,7 +55,7 @@ const GlobalStyles = createGlobalStyle`
   position: absolute;
 
   @media(max-width:991px){
-    background: url('land.jpg');
+    background: url('land.webp');
     background-repeat: no-repeat;
   background-size: cover;
   opacity: 8%;

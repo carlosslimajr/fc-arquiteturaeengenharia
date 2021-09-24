@@ -3,7 +3,7 @@ import { Subtitle } from 'components/commonStyles'
 import React, { useRef, useState } from 'react'
 import { LandingWrapper } from './styles'
 import Image from 'next/image'
-import Foto from '../../../public/land.jpg'
+import Foto from '../../../public/land.webp'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 

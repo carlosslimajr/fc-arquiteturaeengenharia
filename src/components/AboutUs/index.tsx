@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { Title } from 'components/commonStyles'
 import { AboutWrapper } from './styles'
-import AboutPic from '../../assets/about.jpg'
+import AboutPic from '../../assets/about.webp'
 import useMediaQuery from 'hooks/useMediaQuery'
 import { motion } from 'framer-motion'
 
