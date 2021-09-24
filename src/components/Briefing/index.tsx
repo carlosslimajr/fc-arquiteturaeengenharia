@@ -64,7 +64,7 @@ const Briefing = () => {
 
   return (
     <FormWrapper className="container">
-      <div className="row justify-content-center gx-5">
+      <div className="row justify-content-center gx-5 mt-5">
         <div className="title col-12 col-md-8">
           <h1>Briefing de Integração</h1>
           <div className="borda" />

@@ -57,9 +57,9 @@ const Form = () => {
         handleClick(e)
       }}
     >
-      <div className="row justify-content-center gx-5">
+      <div className="row justify-content-center gx-5 mt-5">
         <div className="title col-12 col-md-8">
-          <h1>Formulário de acesso livre</h1>
+          <h1>Orçamento</h1>
           <p>
             Este formulário dá ao Escritório informações básicas para
             entendimento da necessidade e contextualização para levantamento de

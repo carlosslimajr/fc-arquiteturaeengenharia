@@ -55,136 +55,76 @@ export const ServicesWrapper = styled.div`
       height: 100%;
     }
   }
-  .swiper {
-    /* width: 400px; */
-    width: 80%;
-    height: 320px;
-    position: relative;
 
-    .swiper-pagination {
-      /* width: 3px; */
-      /* bottom: 0 !important; */
-      /* position: absolute; */
-      /* bottom: 10px; */
-      /* top: 310px; */
-      /* border: 1px solid black; */
-      /* background: black; */
-      /* position: relative; */
-      margin-top: 310px;
-    }
-  }
-
-  .swiper-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 18px;
-    font-size: 22px;
-    font-weight: bold;
-    color: #fff;
-  }
-
-  .swiper-slide:nth-child(1n) {
-    /* border: 1px solid black; */
-    /* background-color: rgb(206, 17, 17); */
-    /* background: #ffffff; */
-    img {
-      width: 100%;
-    }
-  }
-
-  .swiper-slide:nth-child(2n) {
-    /* background-color: rgb(0, 140, 255); */
-    background: none;
-    /* background: #ffffff; */
-    background: rgba(0, 0, 0, 0);
-  }
-
-  .swiper-slide:nth-child(3n) {
-    /* background-color: rgb(10, 184, 111); */
-    background: rgba(0, 0, 0, 0);
-  }
-
-  .swiper-slide:nth-child(4n) {
-    /* background-color: rgb(211, 122, 7); */
-    background: rgba(0, 0, 0, 0);
-  }
-
-  .swiper-slide:nth-child(5n) {
-    /* background-color: rgb(118, 163, 12); */
-    background: rgba(0, 0, 0, 0);
-  }
-
-  .swiper-slide:nth-child(6n) {
-    /* background-color: rgb(180, 10, 47); */
-    background: rgba(0, 0, 0, 0);
-  }
-
-  .swiper-slide:nth-child(7n) {
-    /* background-color: rgb(35, 99, 19); */
-    background: rgba(0, 0, 0, 0);
-  }
-
-  .swiper-slide:nth-child(8n) {
-    /* background-color: rgb(0, 68, 255); */
-    background: rgba(0, 0, 0, 0);
-  }
-
-  .swiper-slide:nth-child(9n) {
-    /* background-color: rgb(218, 12, 218); */
-  }
-
-  .swiper-slide:nth-child(10n) {
-    /* background-color: rgb(54, 94, 77); */
-  }
-
-  .slide-box {
-    /* border: 1px solid blue; */
-    width: 100%;
-  }
-  .slide {
-    /* border: 3px solid blue;1111 */
-  }
-  .carousel2 {
-    border: 1px solid black;
-    height: 700px;
-    /* width: 600px; */
-    /* display: grid; */
-    /* grid-template-columns: 1fr 1fr; */
-    img {
-      border: 1px solid black;
-      width: 217px;
-    }
-  }
-  .carousel {
-    /* border: 3px solid black; */
-    overflow: auto;
-    overflow: hidden;
-
-    height: 400px;
-    div {
-      img {
-        /* height: 500px; */
-        /* margin-right: 50rem; */
-        /* margin-left: 50rem; */
-      }
-    }
-    .top {
-      border: 1px solid black;
-    }
-
-    @media (min-width: 991px) {
-      border: 1px solid black;
-      width: 100%;
-      margin-left: auto;
-      display: flex;
-      gap: 3rem;
+  @media (min-width: 991px) {
+    .container {
+      display: grid;
+      grid-template-columns: 30% 70%;
       div {
-        /* border: 1px solid black; */
-        img {
-          height: 500px;
+        :nth-child(1) {
+          /* border: 1px solid blue; */
+        }
+        :nth-child(2) {
+          /* border: 1px solid red; */
+          .react-multi-carousel-item {
+            /* border: 1px solid green; */
+            img {
+              /* width: 50px; */
+              width: 384px;
+              /* height: 500px; */
+              max-height: 90%;
+            }
+          }
+          .react-multi-carousel-item.react-multi-carousel-item--active {
+            /* border: 2px solid blue; */
+            transition: all 0.5s;
+            img {
+              max-height: 100%;
+              height: 100%;
+            }
+          }
         }
       }
     }
   }
+
+  .bar {
+    padding-left: 2.2rem;
+    @media (max-width: 991px) {
+      padding-left: 1.4rem;
+    }
+  }
+  .counter {
+    margin-top: 1.4rem;
+    font-family: Prompt;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+
+    span {
+      color: #34344f;
+    }
+  }
+`
+
+interface ProgresProp {
+  progress?: number
+}
+
+export const ProgressBar = styled.div<ProgresProp>`
+  width: 28rem;
+  height: 4px;
+  background: #dfdfdf;
+  /* margin-left: 2.2rem; */
+
+  .progress {
+    height: 100%;
+    width: ${(props) => props.progress + '%'};
+    background: #982424;
+  }
+  @media (max-width: 991px) {
+    width: 18rem;
+  }
+  /* margin-left: 3%; */
 `

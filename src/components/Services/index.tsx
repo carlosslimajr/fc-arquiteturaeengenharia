@@ -7,7 +7,7 @@ import {
 } from '@brainhubeu/react-carousel'
 import '@brainhubeu/react-carousel/lib/style.css'
 import Slider from 'react-slick'
-import { ServicesWrapper } from './styles'
+import { ProgressBar, ServicesWrapper } from './styles'
 import 'swiper/css/bundle'
 import 'swiper/css'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -22,24 +22,35 @@ import 'react-multi-carousel/lib/styles.css'
 import { Title } from 'components/commonStyles'
 import ServicesText from './TextComponent'
 import TextComponent from './TextComponent'
+import useMediaQuery from 'hooks/useMediaQuery'
+import Button from 'components/Button'
 // Import Swiper styles
 
-const Services = () => {
+const Services: React.FC = () => {
   const [selectedImg, setSelectedImg] = useState(0)
+  const [progress, setProgress] = useState(12.5)
 
+  const mobile = useMediaQuery('(max-width: 991px)')
   function handleClick(position) {
     setSelectedImg(position)
+    setProgress(12.5 + 12.5 * position)
+    console.log(position)
   }
   const responsive = {
     desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+      breakpoint: { max: 3000, min: 2001 },
       items: 1,
-      partialVisibilityGutter: 40 // this is needed to tell the amount of px that should be visible.
+      partialVisibilityGutter: 550 // this is needed to tell the amount of px that should be visible.
+    },
+    fullhd: {
+      breakpoint: { max: 2000, min: 1280 },
+      items: 1,
+      partialVisibilityGutter: 520 // this is needed to tell the amount of px that should be visible.
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-      partialVisibilityGutter: 30 // this is needed to tell the amount of px that should be visible.
+      breakpoint: { max: 1279, min: 465 },
+      items: 1,
+      partialVisibilityGutter: 200 // this is needed to tell the amount of px that should be visible.
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -87,25 +98,47 @@ const Services = () => {
               text="A arquitetura de interiores consiste num trabalho de desenvolvimento dos ambientes internos de uso com móveis, decorativos e equipamentos úteis para uma residência ou corporativo."
             />
           )}
+          {selectedImg > 4 && (
+            <TextComponent
+              subtitle="Outro serviço
+              "
+              text="A arquitetura de interiores consiste num trabalho de desenvolvimento dos ambientes internos de uso com móveis, decorativos e equipamentos úteis para uma residência ou corporativo."
+            />
+          )}
+          {!mobile && <Button>Quero Conhecer</Button>}
         </div>
+        <div className="bottom">
+          <Carousel
+            // customTransition="all 2s"
+            // showDots
+            partialVisible={true}
+            responsive={responsive}
+            beforeChange={(slidePosition) => {
+              handleClick(slidePosition)
+            }}
 
-        <Carousel
-          // customTransition="all 2s"
-          // showDots
-          partialVisible={true}
-          responsive={responsive}
-          beforeChange={(slidePosition) => {
-            handleClick(slidePosition)
-          }}
-          // afterChange={() => {
-          //   handleClick()
-          // }}
-        >
-          <img src="/exemplo.png" />
-          <img src="/exemplo.png" />
-          <img src="/exemplo.png" />
-          <img src="/exemplo.png" />
-        </Carousel>
+            // afterChange={() => {
+            //   handleClick()
+            // }}
+          >
+            <img src="/exemplo.png" />
+            <img src="/exemplo.png" />
+            <img src="/exemplo.png" />
+            <img src="/exemplo.png" />
+            <img src="/exemplo.png" />
+            <img src="/exemplo.png" />
+            <img src="/exemplo.png" />
+            <img src="/exemplo.png" />
+          </Carousel>
+          <div className="bar">
+            <ProgressBar progress={progress}>
+              <div className="progress" />
+            </ProgressBar>
+            <div className="counter">
+              <span>0{selectedImg + 1} /</span> 08
+            </div>
+          </div>
+        </div>
       </div>
     </ServicesWrapper>
   )
