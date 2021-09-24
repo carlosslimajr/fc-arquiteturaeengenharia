@@ -102,14 +102,14 @@ const Services: React.FC = () => {
             //   handleClick()
             // }}
           >
-            <img src="/exemplo.png" />
-            <img src="/exemplo.png" />
-            <img src="/exemplo.png" />
-            <img src="/exemplo.png" />
-            <img src="/exemplo.png" />
-            <img src="/exemplo.png" />
-            <img src="/exemplo.png" />
-            <img src="/exemplo.png" />
+            <img src="/exemplo.webp" />
+            <img src="/exemplo.webp" />
+            <img src="/exemplo.webp" />
+            <img src="/exemplo.webp" />
+            <img src="/exemplo.webp" />
+            <img src="/exemplo.webp" />
+            <img src="/exemplo.webp" />
+            <img src="/exemplo.webp" />
           </Carousel>
           <div className="bar">
             <ProgressBar progress={progress}>
