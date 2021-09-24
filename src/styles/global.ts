@@ -53,8 +53,6 @@ const GlobalStyles = createGlobalStyle`
 
   z-index: -1;
   position: absolute;
-  /* filter: brightness(50%);  FAF6ED*/
-
 
   @media(max-width:991px){
     background: url('land.jpg');

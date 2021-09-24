@@ -14,9 +14,7 @@ export const FormWrapper = styled.main`
     }
   }
   .radio {
-    /* border: 1px solid black; */
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     input {
       border: 2px solid black !important;
@@ -27,7 +25,6 @@ export const FormWrapper = styled.main`
   }
 
   .step {
-    /* border: 1px solid black; */
     display: flex;
     width: 90%;
     margin: 0 auto;
@@ -65,7 +62,6 @@ export const FormWrapper = styled.main`
       }
     }
     .linha {
-      /* border: 1px solid black; */
       border-bottom: 1px solid #982424;
       width: 60px;
       height: 50%;
@@ -79,12 +75,10 @@ export const FormWrapper = styled.main`
     .borda {
       width: 60%;
       margin: 4.8rem auto;
-      /* display: none; */
       border: none;
       border: 1px solid #ced4da;
       @media (min-width: 991px) {
         border: none;
-        /* border: 1px solid black; */
       }
     }
     h1 {
@@ -93,7 +87,6 @@ export const FormWrapper = styled.main`
       font-weight: bold;
       font-size: 3.2rem;
       line-height: 36px;
-      /* or 112% */
 
       text-align: center;
       color: #982424;
@@ -107,8 +100,6 @@ export const FormWrapper = styled.main`
       font-weight: normal;
       font-size: 18px;
       line-height: 27px;
-      /* or 150% */
-      /* border: 1px solid black; */
       text-align: center;
 
       color: #34344f;
@@ -120,7 +111,6 @@ export const FormWrapper = styled.main`
     font-weight: 600;
     font-size: 24px;
     line-height: 36px;
-    /* identical to box height, or 150% */
 
     color: #982424;
   }

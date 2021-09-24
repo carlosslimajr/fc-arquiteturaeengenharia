@@ -2,13 +2,11 @@
 import styled from 'styled-components'
 
 export const ServicesWrapper = styled.div`
-  /* border: 2px solid black; */
   background: #faf6ed;
   height: auto;
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* margin: 8rem 0; */
   margin-top: 5.6rem;
   padding-bottom: 5rem;
   padding-top: 6.8rem;
@@ -31,8 +29,6 @@ export const ServicesWrapper = styled.div`
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;
-    /* or 150% */
-    /* border: 1px solid black; */
     color: #696871;
     margin-bottom: 3.2rem;
     height: 170px;
@@ -41,14 +37,12 @@ export const ServicesWrapper = styled.div`
     display: flex;
     transition: all 0.5s;
     img {
-      /* border: 1px solid red; */
       transition: max-height 0.5s;
       margin-top: auto;
       max-height: 90%;
     }
   }
-  .react-multi-carousel-item.react-multi-carousel-item--active {
-    /* border: 2px solid blue; */
+  .react-multi-carousel-item.react-multi-carousel-item--active {/
     transition: all 0.5s;
     img {
       max-height: 100%;
@@ -61,22 +55,15 @@ export const ServicesWrapper = styled.div`
       display: grid;
       grid-template-columns: 30% 70%;
       div {
-        :nth-child(1) {
-          /* border: 1px solid blue; */
-        }
+
         :nth-child(2) {
-          /* border: 1px solid red; */
           .react-multi-carousel-item {
-            /* border: 1px solid green; */
             img {
-              /* width: 50px; */
               width: 384px;
-              /* height: 500px; */
               max-height: 90%;
             }
           }
           .react-multi-carousel-item.react-multi-carousel-item--active {
-            /* border: 2px solid blue; */
             transition: all 0.5s;
             img {
               max-height: 100%;
@@ -116,7 +103,6 @@ export const ProgressBar = styled.div<ProgresProp>`
   width: 28rem;
   height: 4px;
   background: #dfdfdf;
-  /* margin-left: 2.2rem; */
 
   .progress {
     height: 100%;
@@ -126,5 +112,4 @@ export const ProgressBar = styled.div<ProgresProp>`
   @media (max-width: 991px) {
     width: 18rem;
   }
-  /* margin-left: 3%; */
 `

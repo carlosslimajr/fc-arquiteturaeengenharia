@@ -18,7 +18,6 @@ export const LandingWrapper = styled.div`
     width: 85%;
     margin-left: auto;
     margin-right: auto;
-    /* margin: 0 auto; */
   }
   p {
     font-family: Prompt;
@@ -34,7 +33,6 @@ export const LandingWrapper = styled.div`
     margin-bottom: 3rem;
   }
   button {
-    /* border: 2px solid blue; */
     margin: 3rem auto;
   }
 
@@ -52,7 +50,6 @@ export const LandingWrapper = styled.div`
       font-weight: bold;
       font-size: 48px;
       line-height: 62px;
-      /* or 129% */
       width: 100%;
 
       color: #982424;
@@ -64,7 +61,6 @@ export const LandingWrapper = styled.div`
       font-weight: normal;
       font-size: 18px;
       line-height: 27px;
-      /* or 150% */
       width: 100%;
 
       color: #34344f;
@@ -77,12 +73,10 @@ export const LandingWrapper = styled.div`
       margin: 3rem 0 0 0;
     }
     .cont {
-      /* border: 1px solid black; */
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
     @media (max-width: 1199px) {
-      /* border: 1px solid black; */
       h1 {
         font-size: 34px;
         line-height: 40px;
@@ -94,11 +88,8 @@ export const LandingWrapper = styled.div`
   }
 
   .image {
-    /* border: 3px solid black; */
-    /* height: 545px; */
     img {
       height: 520px;
-      /* display: none; */
     }
   }
   @media (max-width: 992px) {

@@ -3,8 +3,6 @@ import styled from 'styled-components'
 export const AboutWrapper = styled.div`
   margin-bottom: 9.6rem !important;
   position: relative;
-
-  /* border: 1px solid black; */
   img {
     width: 80%;
     margin: 0 auto;
@@ -38,22 +36,17 @@ export const AboutWrapper = styled.div`
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;
-    /* or 150% */
-
     color: #34344f;
   }
-  /* @media (max-width: 992px) { */
   .bold {
     font-family: Prompt;
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
     line-height: 27px;
-    /* or 150% */
-
     color: #34344f;
   }
-  /* } */
+
   .about {
     @media (min-width: 991px) {
       display: grid;
@@ -84,7 +77,6 @@ export const AboutWrapper = styled.div`
   @media (max-width: 1199px) {
     .text {
       p {
-        /* border: 1px solid black; */
         font-size: 16px;
         line-height: 20px;
       }

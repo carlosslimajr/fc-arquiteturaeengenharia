@@ -1,30 +1,11 @@
 import React, { useState } from 'react'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
-import {
-  slidesToShowPlugin,
-  slidesToScrollPlugin
-} from '@brainhubeu/react-carousel'
-import '@brainhubeu/react-carousel/lib/style.css'
-import Slider from 'react-slick'
 import { ProgressBar, ServicesWrapper } from './styles'
-import 'swiper/css/bundle'
-import 'swiper/css'
-import { Swiper, SwiperSlide } from 'swiper/react'
-// import Swiper core and required modules
-import SwiperCore, { Pagination, EffectCards } from 'swiper'
-
-// install Swiper modules
-SwiperCore.use([EffectCards, Pagination])
-
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import { Title } from 'components/commonStyles'
-import ServicesText from './TextComponent'
 import TextComponent from './TextComponent'
 import useMediaQuery from 'hooks/useMediaQuery'
 import Button from 'components/Button'
-// Import Swiper styles
 
 const Services: React.FC = () => {
   const [selectedImg, setSelectedImg] = useState(0)

@@ -5,14 +5,6 @@ export const BlogWrapper = styled.div`
     linear-gradient(269.99deg, #ff7433 0.01%, #2e4c6f 70.99%, #2d4c71 99.99%);
   background-repeat: no-repeat;
   height: 326px;
-  /* margin-top: 34rem; */
-
-  .backgroundtop {
-    /* width: 34rem; */
-    /* border: 3px solid black; */
-    /* height: 34rem; */
-  }
-
   .content {
     display: grid;
     grid-template-columns: 50% 50%;

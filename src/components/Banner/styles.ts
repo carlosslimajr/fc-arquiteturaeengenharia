@@ -6,7 +6,6 @@ export const BannerWrapper = styled.div`
   height: 380px;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   flex-direction: column;
   width: 96%;
   margin: 0 auto 5.6rem auto;
@@ -41,7 +40,6 @@ export const BannerWrapper = styled.div`
     line-height: 48px;
     text-align: center;
     color: #34344f;
-    /* margin-top: 15px; */
     margin-bottom: 3rem;
 
     @media (max-width: 992px) {
@@ -50,7 +48,6 @@ export const BannerWrapper = styled.div`
       font-weight: 600;
       font-size: 20px;
       line-height: 28px;
-      /* or 140% */
       text-align: center;
       color: #34344f;
     }
@@ -58,7 +55,6 @@ export const BannerWrapper = styled.div`
   @media (min-width: 991px) {
     margin-bottom: 0px;
     p {
-      /* border: 1px solid black; */
       width: 80%;
       margin: 0 auto;
       font-family: Prompt;
@@ -66,7 +62,6 @@ export const BannerWrapper = styled.div`
       font-weight: 600;
       font-size: 32px;
       line-height: 48px;
-      /* or 150% */
       margin-top: 0rem;
       margin-bottom: 3rem;
       text-align: center;

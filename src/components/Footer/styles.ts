@@ -13,8 +13,6 @@ export const FooterWrapper = styled.footer`
   }
 
   .copyright {
-    /* border: 1px solid black; */
-    /* border-top: 3px solid rgba(52, 52, 79, 0.1); */
     text-align: center;
     font-family: Usual;
     font-style: normal;
@@ -62,7 +60,6 @@ export const FooterWrapper = styled.footer`
         font-weight: normal;
         margin-bottom: 16px;
         line-height: 24px;
-        /* color: #982424; */
         &:hover {
           cursor: pointer;
           color: #982424;
@@ -72,7 +69,6 @@ export const FooterWrapper = styled.footer`
   }
   @media (max-width: 991px) {
     p {
-      /* border: 1px solid black; */
       width: 100%;
     }
     .grid {
@@ -86,7 +82,6 @@ export const FooterWrapper = styled.footer`
       }
       button {
         margin: 4rem auto;
-        /* width: 300px; */
         height: 60px;
       }
     }

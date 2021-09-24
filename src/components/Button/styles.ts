@@ -14,7 +14,6 @@ export const ButtonWrapper = styled.button<ButtonProps>`
 
   border: none;
   color: white;
-  /* width: 240px; */
   width: ${(props) => (props.width ? props.width : '250px')};
   height: ${(props) => (props.height ? props.height : '60px')};
   background-color: ${(props) =>
@@ -24,20 +23,15 @@ export const ButtonWrapper = styled.button<ButtonProps>`
   font-weight: 600;
   font-size: 16px;
   line-height: 21px;
-  /* identical to box height, or 131% */
-
   text-align: center;
   text-transform: uppercase;
-
   color: #ffffff;
-
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
   transition: all 0.2s;
   max-width: 400px;
   &:hover {
     transform: scale(1.05);
-    /* border: 1px solid; */
     border-radius: 10px;
     box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
   }
