@@ -113,6 +113,11 @@ export const FormWrapper = styled.main`
     line-height: 36px;
 
     color: #982424;
+    margin-top: 5rem;
+    margin-bottom: 3.2rem;
+    :nth-child(1) {
+      margin-top: 0;
+    }
   }
   h5 {
     font-family: Prompt;
@@ -121,6 +126,7 @@ export const FormWrapper = styled.main`
     font-size: 18px;
     line-height: 27px;
     color: #982424;
+    margin-bottom: 1.6rem;
   }
 
   .checkbox {

@@ -20,7 +20,7 @@ export const ButtonWrapper = styled.button<ButtonProps>`
     props.background ? props.background : '#982424'};
   font-family: Prompt;
   font-style: normal;
-  font-weight: 600;
+  font-weight: bold;
   font-size: 16px;
   line-height: 21px;
   text-align: center;

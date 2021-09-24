@@ -122,7 +122,7 @@ const Form = () => {
             value={form.areaDoTerreno}
             onChange={handleChange}
           />
-          {terrenoRegularizado}
+
           <h5>Terreno regularizado:</h5>
           <div className="checkbox">
             <Radio

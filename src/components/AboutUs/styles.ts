@@ -37,6 +37,7 @@ export const AboutWrapper = styled.div`
     font-size: 18px;
     line-height: 27px;
     color: #34344f;
+    text-align: left;
   }
   .bold {
     font-family: Prompt;
@@ -65,6 +66,14 @@ export const AboutWrapper = styled.div`
         height: 36rem;
         background: #faf6ed;
         padding: 50px;
+        /* max-width: 400px; */
+        p {
+          max-width: 500px;
+
+          :nth-child(1) {
+            margin-bottom: 2.4rem;
+          }
+        }
       }
       .rightside {
         img {

@@ -38,6 +38,7 @@ export const FooterWrapper = styled.footer`
       line-height: 24px;
       color: #34344f;
       width: 80%;
+      margin-top: 1.6rem;
     }
 
     h5 {
@@ -47,6 +48,7 @@ export const FooterWrapper = styled.footer`
       font-size: 16px;
       line-height: 24px;
       color: #982424;
+      margin-bottom: 2.4rem;
     }
     ul {
       list-style-type: none;

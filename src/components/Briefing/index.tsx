@@ -57,6 +57,7 @@ const Briefing = () => {
   const nextStep = (e: any) => {
     e.preventDefault()
     // alert('bateu aqui')
+    window.scrollTo(0, 0)
     if (stepper < 1) {
       setStepper(stepper + 1)
     }

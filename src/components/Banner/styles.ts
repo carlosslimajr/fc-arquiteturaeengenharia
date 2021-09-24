@@ -46,10 +46,13 @@ export const BannerWrapper = styled.div`
       font-family: Prompt;
       font-style: normal;
       font-weight: 600;
-      font-size: 20px;
+      font-size: 19px;
       line-height: 28px;
-      text-align: center;
+      text-align: left;
       color: #34344f;
+      /* max-width: 250px; */
+      /* width: 110%; */
+      padding: 0 15px;
     }
   }
   @media (min-width: 991px) {

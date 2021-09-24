@@ -48,8 +48,10 @@ export const ContactWrapper = styled.div`
       font-weight: bold;
       font-size: 32px;
       line-height: 36px;
-
       color: #ffffff;
+      @media (min-width: 991px) {
+        margin-top: 2.5rem;
+      }
     }
     p {
       font-family: Prompt;
