@@ -58,7 +58,7 @@ const AboutUs: React.FC = () => {
         ref={cardsSectionRef}
         initial="hidden"
         animate={isCardsSectionCardsVisible && { y: 0, opacity: 1 }}
-        transition={{ ease: 'easeOut', duration: 0.5 }}
+        transition={{ ease: 'easeOut', duration: 0.8 }}
         variants={{
           hidden: {
             // x: 100,

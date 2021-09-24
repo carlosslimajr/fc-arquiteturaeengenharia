@@ -38,7 +38,7 @@ const Landing = () => {
         <motion.div
           initial="right"
           animate={{ x: 0, opacity: 1 }}
-          transition={{ ease: 'easeOut', duration: 0.5 }}
+          transition={{ ease: 'easeOut', duration: 0.8 }}
           variants={{
             right: {
               x: -100,
@@ -60,7 +60,7 @@ const Landing = () => {
         <motion.div
           initial="right"
           animate={{ x: 0, opacity: 1 }}
-          transition={{ ease: 'easeOut', duration: 0.5 }}
+          transition={{ ease: 'easeOut', duration: 0.8 }}
           variants={{
             right: {
               x: 100,

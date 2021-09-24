@@ -67,14 +67,7 @@ const Header = () => {
           />
         </h5>
 
-        {mobile ? (
-          <div
-            className="mobilelogo"
-            onClick={() => setMobileHeader((active) => !active)}
-          >
-            <MobileLogo />
-          </div>
-        ) : (
+        {!mobile && (
           <>
             <nav>
               <ul>
@@ -99,6 +92,15 @@ const Header = () => {
               <Button>PEÇA UM ORÇAMENTO</Button>
             </Link>
           </>
+        )}
+
+        {mobile && (
+          <div
+            className="mobilelogo"
+            onClick={() => setMobileHeader((active) => !active)}
+          >
+            <MobileLogo />
+          </div>
         )}
 
         {mobileHeader && (
