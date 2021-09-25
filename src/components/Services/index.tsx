@@ -41,7 +41,7 @@ const Services: React.FC = () => {
   }
 
   return (
-    <ServicesWrapper>
+    <ServicesWrapper id="servicos">
       <div className="container">
         <div className="top">
           <Title className="title">Nosso Serviços</Title>
@@ -97,6 +97,7 @@ const Services: React.FC = () => {
             beforeChange={(slidePosition) => {
               handleClick(slidePosition)
             }}
+            focusOnSelect
 
             // afterChange={() => {
             //   handleClick()

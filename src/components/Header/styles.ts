@@ -30,13 +30,16 @@ export const HeaderWrapper = styled.header`
   }
 
   .sideBar {
-    padding: 5.1rem;
+    padding: 4.1rem;
 
     & > div.top {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 7rem;
+      margin-bottom: 4rem;
+      /* border: 1px solid black; */
+      div {
+        /* border: 1px solid blue; */
+        margin-left: auto;
+      }
     }
 
     & > div.navigation > a.gradient-box {
@@ -82,6 +85,21 @@ export const HeaderWrapper = styled.header`
       align-items: center;
       padding-top: 3rem;
       border-top: 3px solid rgba(75, 63, 145, 0.1);
+      /* border: 2px solid black; */
+      margin-top: 3rem;
+      p {
+        /* border: 1px solid black; */
+        font-family: Usual;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        /* or 171% */
+
+        text-align: center;
+
+        color: #34344f;
+      }
 
       & > svg {
         margin-bottom: 3.6rem;
@@ -133,7 +151,9 @@ export const HeaderWrapper = styled.header`
 
     nav {
       height: 60px;
-      width: 65%;
+
+      margin-left: auto;
+      margin-right: 3rem;
     }
     ul {
       list-style-type: none;
@@ -150,6 +170,7 @@ export const HeaderWrapper = styled.header`
         font-size: 15px;
         color: #4b3f91;
         margin-right: 25px;
+        margin-left: 30px;
         padding: 5px 0px;
         height: 40px;
         line-height: 24px;

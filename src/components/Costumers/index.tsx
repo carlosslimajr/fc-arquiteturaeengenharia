@@ -1,7 +1,8 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import React, { useCallback, useEffect, useRef, useState } from 'react'
-
+import Carousel from 'react-multi-carousel'
+import 'react-multi-carousel/lib/styles.css'
 import { CostumersWrapper } from './styles'
 import logo from 'assets/logo.png'
 import { Subtitle, Title } from 'components/commonStyles'
@@ -21,6 +22,20 @@ import { motion } from 'framer-motion'
 
 const Costumer: React.FC = () => {
   const clienteRef = React.useRef(null)
+
+  const responsive = {
+    fullhd: {
+      breakpoint: { max: 3000, min: 992 },
+      items: 6,
+      partialVisibilityGutter: 520,
+      slidesToSlide: 6
+    },
+    mobile: {
+      breakpoint: { max: 991, min: 0 },
+      items: 3,
+      slidesToSlide: 3
+    }
+  }
 
   // setInterval(() => {
   //   if (clienteRef) {
@@ -97,43 +112,64 @@ const Costumer: React.FC = () => {
           }
         }}
       >
-        <div className="downSide" ref={clienteRef}>
-          <div className="logo">
-            <img src={ebateca} alt="" />
-          </div>
-          <div className="logo">
-            <img src={vogue} alt="" />
-          </div>
-          <div className="logo">
-            <img src={versatile} alt="" />
-          </div>
-          <div className="logo">
-            <img src={dom} alt="" />
-          </div>
-          <div className="logo">
-            <img src={london} alt="" />
-          </div>
-          <div className="logo">
-            <img src={boteco} alt="" />
-          </div>
-          {/* <div className="logo">
-          <img src={belavista} alt="" />
-        </div>
-        <div className="logo">
-          <img src={bahia} alt="" />
-        </div>
-        <div className="logo">
-          <img src={anascimento} alt="" />
-        </div>
-        <div className="logo">
-          <img src={alphaville} alt="" />
-        </div>
-        <div className="logo">
-          <img src={aloha} alt="" />
-        </div>
-        <div className="logo">
-          <img src={pirao} alt="" />
-        </div> */}
+        <div className="down">
+          <Carousel
+            // customTransition="all 2s"
+            showDots
+            // partialVisible={true}
+            responsive={responsive}
+            // beforeChange={(slidePosition) => {
+            //   handleClick(slidePosition)
+            // }}
+            autoPlay={true}
+            autoPlaySpeed={8000}
+            infinite={true}
+            transitionDuration={2000}
+            removeArrowOnDeviceType={['tablet', 'mobile', 'fullhd', 'desktop']}
+            draggable={true}
+            renderDotsOutside={true}
+
+            // afterChange={() => {
+            //   handleClick()
+            // }}
+          >
+            <div className="logo">
+              <img src={ebateca} alt="" />
+            </div>
+            <div className="logo">
+              <img src={vogue} alt="" />
+            </div>
+            <div className="logo">
+              <img src={versatile} alt="" />
+            </div>
+            <div className="logo">
+              <img src={dom} alt="" />
+            </div>
+            <div className="logo">
+              <img src={london} alt="" />
+            </div>
+            <div className="logo">
+              <img src={boteco} alt="" />
+            </div>
+            <div className="logo">
+              <img src={belavista} alt="" />
+            </div>
+            <div className="logo">
+              <img src={bahia} alt="" />
+            </div>
+            <div className="logo">
+              <img src={anascimento} alt="" />
+            </div>
+            <div className="logo">
+              <img src={alphaville} alt="" />
+            </div>
+            <div className="logo">
+              <img src={aloha} alt="" />
+            </div>
+            <div className="logo">
+              <img src={pirao} alt="" />
+            </div>
+          </Carousel>
         </div>
       </motion.div>
     </CostumersWrapper>

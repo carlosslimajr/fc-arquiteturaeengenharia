@@ -44,6 +44,19 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
+  input, textarea, select {
+
+  border-radius: 6px;
+  transition: all 0.2s;
+
+  &:active,
+  &:focus {
+    border: 1px solid #FF7433;
+    outline: none;
+    box-shadow: 0 3px 5px #FF743320;
+  }
+}
+
 
   .background {
 
@@ -55,7 +68,7 @@ const GlobalStyles = createGlobalStyle`
   position: absolute;
 
   @media(max-width:991px){
-    background: url('land.webp');
+    /* background: url('land.webp'); */
     background-repeat: no-repeat;
   background-size: cover;
   opacity: 8%;

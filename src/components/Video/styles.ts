@@ -16,5 +16,11 @@ export const VideoWrapper = styled.div`
 
     filter: opacity(20%) blur(0.5px);
     opacity: 1;
+
+    @media (max-width: 992px) {
+      object-fit: cover;
+
+      right: -100px;
+    }
   }
 `

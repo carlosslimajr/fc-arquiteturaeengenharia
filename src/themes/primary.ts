@@ -5,7 +5,7 @@ export const theme = {
     backgroundCards: '#768AA2',
     textHero: '#696871',
     backgroundHero: '#EDFBFF',
-    borderCta: '##FF7433',
+    borderCta: '#FF7433',
     error: '#ff2b2b',
     success: '#2bff6b'
   },

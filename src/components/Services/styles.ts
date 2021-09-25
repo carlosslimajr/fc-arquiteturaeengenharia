@@ -42,7 +42,7 @@ export const ServicesWrapper = styled.div`
       max-height: 90%;
     }
   }
-  .react-multi-carousel-item.react-multi-carousel-item--active {/
+  .react-multi-carousel-item.react-multi-carousel-item--active {
     transition: all 0.5s;
     img {
       max-height: 100%;
@@ -55,7 +55,6 @@ export const ServicesWrapper = styled.div`
       display: grid;
       grid-template-columns: 30% 70%;
       div {
-
         :nth-child(2) {
           .react-multi-carousel-item {
             img {

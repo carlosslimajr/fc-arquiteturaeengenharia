@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const FooterWrapper = styled.footer`
   width: 100%;
   display: grid;
-  padding: 60px;
+  padding: 60px 0px;
   font-family: Prompt;
   background: #faf6ed;
   img {
@@ -20,6 +20,10 @@ export const FooterWrapper = styled.footer`
     font-size: 14px;
     line-height: 24px;
     margin-top: 3rem;
+    @media (min-width: 991px) {
+      border-top: 3px solid rgba(52, 52, 79, 0.1);
+      padding-top: 2.4rem;
+    }
   }
 
   .grid {
@@ -85,6 +89,11 @@ export const FooterWrapper = styled.footer`
       button {
         margin: 4rem auto;
         height: 60px;
+        a {
+          display: none;
+          :hover {
+          }
+        }
       }
     }
 

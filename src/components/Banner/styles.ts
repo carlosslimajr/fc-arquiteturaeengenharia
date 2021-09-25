@@ -11,6 +11,9 @@ export const BannerWrapper = styled.div`
   margin: 0 auto 5.6rem auto;
   padding: 8rem 3.2rem;
   margin-bottom: 0px;
+  @media (max-width: 991px) {
+    height: 360px;
+  }
 
   .iconBackground {
     width: 102px;
@@ -48,9 +51,12 @@ export const BannerWrapper = styled.div`
       font-weight: 600;
       font-size: 19px;
       line-height: 28px;
-      text-align: left;
+      text-align: center;
       color: #34344f;
       /* max-width: 250px; */
+      /* border: 1px solid black; */
+      width: 120%;
+      max-width: 600px;
       /* width: 110%; */
       padding: 0 15px;
     }

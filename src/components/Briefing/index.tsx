@@ -2,6 +2,7 @@ import Button from 'components/Button'
 import Checkbox from 'components/CheckBox/CheckBox'
 import Input from 'components/Input'
 import Radio from 'components/Radio/Radio'
+import ServicesSide from 'components/ServicesSide'
 import React, { useState } from 'react'
 import { FormWrapper, RightSide } from '../Formulario/styles'
 
@@ -275,74 +276,12 @@ const Briefing = () => {
                 />
               </div>
               <Button width="100%" onClick={(e) => handleClick(e)}>
-                Próximo
+                Enviar
               </Button>
             </>
           )}
         </form>
-        <RightSide className="col-12 col-lg-5">
-          <div className="contact">
-            <h5>Contato</h5>
-            <p>email@email.com</p>
-            <p>557599999999</p>
-            <p>
-              Rua Campos Sales, 478 - Ponto Central Feira de Santana - BA,
-              44052-526
-            </p>
-            <p>Insta</p>
-          </div>
-
-          <div className="services">
-            <h4>Nossos serviços</h4>
-            <div className="service">
-              <h5>Visita Técnica</h5>
-              <p>
-                Serviço presencial cujo objetivo é verificar situação ou
-                condições técnicas necessárias para elaboração de projetos,
-                execução de obras, encaminhamento de estudos complementares para
-                patologias de obras.
-              </p>
-            </div>
-            <div className="service">
-              <h5>Visita Técnica</h5>
-              <p>
-                Serviço presencial cujo objetivo é verificar situação ou
-                condições técnicas necessárias para elaboração de projetos,
-                execução de obras, encaminhamento de estudos complementares para
-                patologias de obras.
-              </p>
-            </div>
-            <div className="service">
-              <h5>Visita Técnica</h5>
-              <p>
-                Serviço presencial cujo objetivo é verificar situação ou
-                condições técnicas necessárias para elaboração de projetos,
-                execução de obras, encaminhamento de estudos complementares para
-                patologias de obras.
-              </p>
-            </div>
-            <div className="service">
-              <h5>Visita Técnica</h5>
-              <p>
-                Serviço presencial cujo objetivo é verificar situação ou
-                condições técnicas necessárias para elaboração de projetos,
-                execução de obras, encaminhamento de estudos complementares para
-                patologias de obras.
-              </p>
-            </div>
-            <div className="service">
-              <h5>Visita Técnica</h5>
-              <p>
-                Serviço presencial cujo objetivo é verificar situação ou
-                condições técnicas necessárias para elaboração de projetos,
-                execução de obras, encaminhamento de estudos complementares para
-                patologias de obras.
-              </p>
-              <p>e muito mais ...</p>
-            </div>
-            {/* <button>Conheça mais</button> */}
-          </div>
-        </RightSide>
+        <ServicesSide />
       </div>
     </FormWrapper>
   )

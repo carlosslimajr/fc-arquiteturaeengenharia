@@ -4,6 +4,9 @@ import Input from 'components/Input'
 import Radio from 'components/Radio/Radio'
 import React, { useState } from 'react'
 import { FormWrapper, RightSide } from './styles'
+import InstaSvg from '../../../public/insta.svg'
+import ContatoSvg from '../../../public/contato.svg'
+import ServicesSide from 'components/ServicesSide'
 
 const Form = () => {
   const [form, setForm] = React.useState({
@@ -36,7 +39,7 @@ const Form = () => {
     const allTipoPavimento = tipoPavimento.join()
 
     window.open(
-      `https://api.whatsapp.com/send?phone=5575992604333&text=|*NOME*:${form.nome}| *NUMERO*:${form.contato}|*EMAIL*:${form.email} |*ENDEREÇO*:${form.endereco}|*TIPO DE IMÓVEL*:${tipoImovel} |*NECESSIDADE TÉCNICA*:${allNecessidadeTec} |*ÁREA DO TERRENO*: ${form.areaDoTerreno} |*TERRENO REGULARIZADO*: ${terrenoRegularizado} |*QUANTIDADE DE PAVIMENTOS*: ${form.quantidadeDePavimentos} - ${allTipoPavimento} |*TIPOS DE PROJETOS*: ${allTiposProjetos} |*MOTIVO DE PROCURA*: ${form.motivoDaProcura}`
+      `https://api.whatsapp.com/send?phone=5575992604333&text=|*NOME*:${form.nome}/ *NUMERO*:${form.contato}/*EMAIL*:${form.email} /*ENDEREÇO*:${form.endereco}/*TIPO DE IMÓVEL*:${tipoImovel} /*NECESSIDADE TÉCNICA*:${allNecessidadeTec} /*ÁREA DO TERRENO*: ${form.areaDoTerreno} /*TERRENO REGULARIZADO*: ${terrenoRegularizado} /*QUANTIDADE DE PAVIMENTOS*: ${form.quantidadeDePavimentos} - ${allTipoPavimento} /*TIPOS DE PROJETOS*: ${allTiposProjetos} /*MOTIVO DE PROCURA*: ${form.motivoDaProcura}`
     )
   }
 
@@ -162,69 +165,7 @@ const Form = () => {
           />
           <Button width="100%">Enviar</Button>
         </form>
-        <RightSide className="col-12 col-lg-5">
-          <div className="contact">
-            <h5>Contato</h5>
-            <p>email@email.com</p>
-            <p>557599999999</p>
-            <p>
-              Rua Campos Sales, 478 - Ponto Central Feira de Santana - BA,
-              44052-526
-            </p>
-            <p>Insta</p>
-          </div>
-
-          <div className="services">
-            <h4>Nossos serviços</h4>
-            <div className="service">
-              <h5>Visita Técnica</h5>
-              <p>
-                Serviço presencial cujo objetivo é verificar situação ou
-                condições técnicas necessárias para elaboração de projetos,
-                execução de obras, encaminhamento de estudos complementares para
-                patologias de obras.
-              </p>
-            </div>
-            <div className="service">
-              <h5>Visita Técnica</h5>
-              <p>
-                Serviço presencial cujo objetivo é verificar situação ou
-                condições técnicas necessárias para elaboração de projetos,
-                execução de obras, encaminhamento de estudos complementares para
-                patologias de obras.
-              </p>
-            </div>
-            <div className="service">
-              <h5>Visita Técnica</h5>
-              <p>
-                Serviço presencial cujo objetivo é verificar situação ou
-                condições técnicas necessárias para elaboração de projetos,
-                execução de obras, encaminhamento de estudos complementares para
-                patologias de obras.
-              </p>
-            </div>
-            <div className="service">
-              <h5>Visita Técnica</h5>
-              <p>
-                Serviço presencial cujo objetivo é verificar situação ou
-                condições técnicas necessárias para elaboração de projetos,
-                execução de obras, encaminhamento de estudos complementares para
-                patologias de obras.
-              </p>
-            </div>
-            <div className="service">
-              <h5>Visita Técnica</h5>
-              <p>
-                Serviço presencial cujo objetivo é verificar situação ou
-                condições técnicas necessárias para elaboração de projetos,
-                execução de obras, encaminhamento de estudos complementares para
-                patologias de obras.
-              </p>
-              <p>e muito mais ...</p>
-            </div>
-            {/* <button>Conheça mais</button> */}
-          </div>
-        </RightSide>
+        <ServicesSide />
       </div>
     </FormWrapper>
   )

@@ -8,6 +8,7 @@ import Button from 'components/Button/'
 import MobileLogo from '../../assets/svg/logomobile.svg'
 import { motion } from 'framer-motion'
 import RightArrow from '../../../public/right.svg'
+import MenuClose from '../../../public/close.svg'
 
 import Image from 'next/image'
 
@@ -59,7 +60,7 @@ const Header = () => {
       <div className={`header ${mobile && 'mobile'}`}>
         <h5>
           <Image
-            src="/logo.png"
+            src="/logo-topo.png"
             alt="Foto exemplo"
             width="110px"
             height="92px"
@@ -80,9 +81,9 @@ const Header = () => {
                 <li>
                   <Link href="/#servicos">Nossos serviços</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link href="/#clientes">Clientes</Link>
-                </li>
+                </li> */}
                 <li>
                   <Link href="#trabalhe">Trabalhe Conosco</Link>
                 </li>
@@ -111,23 +112,11 @@ const Header = () => {
             variants={wrapper}
           >
             <div className="top">
-              <Link href="/">
-                {/* <a> */}
-                <Image
-                  src="/logo.png"
-                  alt="Foto exemplo"
-                  width="110px"
-                  height="92px"
-                  className="imagi"
-                />
-
-                {/* </a> */}
-              </Link>
               <div
                 className="icon-menu"
                 onClick={() => setMobileHeader((active) => !active)}
               >
-                {/* <MenuOpen /> */}x
+                <MenuClose />
               </div>
             </div>
             <motion.div
@@ -166,7 +155,7 @@ const Header = () => {
                   Nossos serviços <RightArrow />
                 </motion.a>
               </Link>
-              <Link href="/#clientes">
+              {/* <Link href="/#clientes">
                 <motion.a
                   variants={items}
                   // style={{ fontWeight: pathname === '/parceiros' && 700 }}
@@ -175,7 +164,7 @@ const Header = () => {
                 >
                   Clientes <RightArrow />
                 </motion.a>
-              </Link>
+              </Link> */}
               <Link href="#trabalhe">
                 <motion.a
                   variants={items}
@@ -187,7 +176,9 @@ const Header = () => {
                 </motion.a>
               </Link>
             </motion.div>
-            <div className="sider-bar-footer">{/* <Logo /> */}</div>
+            <div className="sider-bar-footer">
+              <p>© 2021 FC Arquitetura e Engenharia</p>
+            </div>
           </motion.div>
         )}
       </div>

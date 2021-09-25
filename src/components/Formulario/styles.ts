@@ -185,9 +185,9 @@ export const RightSide = styled.div`
       font-style: normal;
       font-weight: 600;
       font-size: 24px;
-      line-height: 36px;
+      line-height: 30px;
       color: #982424;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
     p {
       margin-bottom: 24px;
@@ -197,6 +197,14 @@ export const RightSide = styled.div`
       font-size: 16px;
       line-height: 24px;
       color: #34344f;
+      :nth-child(1) {
+        margin-bottom: 1.4rem;
+      }
+      @media (max-width: 991px) {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 320px;
+      }
     }
   }
 

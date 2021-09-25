@@ -6,7 +6,7 @@ import { FooterWrapper } from './styles'
 import Button from 'components/Button/'
 import Contact from 'components/Contact'
 import Image from 'next/image'
-
+import InstaSvg from '../../../public/insta.svg'
 const Footer = () => {
   const router = useRouter()
 
@@ -62,17 +62,25 @@ const Footer = () => {
                   Rua Campos Sales, 478 - Ponto Central Feira de Santana - BA,
                   44052-526
                 </li>
-                {/* <li>insta</li> */}
+                <li>
+                  <a
+                    href="https://www.instagram.com/fc.arquiteturaeengenharia/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <InstaSvg />
+                  </a>
+                </li>
               </ul>
-              <Button width="230px" height="45px">
-                Peça um orçamento
-              </Button>
+              {/* <Link href="/formulario">
+                <Button width="230px" height="45px">
+                  Peça um orçamento
+                </Button>
+              </Link> */}
             </section>
           </div>
 
-          <p className="copyright">
-            © 2021 FC Arquitetura e Engenharia | All Rights Reserved.
-          </p>
+          <p className="copyright">© 2021 FC Arquitetura e Engenharia</p>
         </div>
       </FooterWrapper>
     </>
