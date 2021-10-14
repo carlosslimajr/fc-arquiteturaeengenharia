@@ -50,7 +50,7 @@ const Form = () => {
 
   function handleCheckBox({ target }) {
     // set
-    console.log('target here')
+    console.log('target heres')
     console.log(target.value)
   }
   return (
