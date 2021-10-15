@@ -1,11 +1,10 @@
-# SITE ATHAN
+# FC-ARQUITETURA E ENGENHARIA
 
-Projeto desenvolvido com NextJS.
-
-## Como executar o projeto localmente
+## How to run locally
 
 Para rodar localmente:
-- Faça um **clone** desse repositório na sua máquina;
-- Instale as libs necessárias com o **yarn** ou **npm install**;
-- Depois de instalar, rode **yarn dev** ou **npm run dev**.
-- Acesse o [localhost:3001](http://localhost:3001)
+- **Clone** of this repository on your machine;
+- install the necessary libs with  **yarn** or **npm install**;
+- Run **yarn dev** ou **npm run dev**.
+- Go to[localhost:3001](http://localhost:3001)
+- You can also check the project here https://www.fcarquiteturaeengenharia.com.br/
