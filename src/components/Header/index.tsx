@@ -73,7 +73,7 @@ const Header = () => {
             <nav>
               <ul>
                 <li>
-                  <Link href="/#inicio">Home</Link>
+                  <Link href="/#inicio">Início</Link>
                 </li>
                 <li>
                   <Link href="/#sobre">Quem somos</Link>

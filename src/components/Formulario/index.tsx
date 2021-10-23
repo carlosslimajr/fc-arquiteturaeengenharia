@@ -37,7 +37,7 @@ const Form = () => {
     const allTipoPavimento = tipoPavimento.join()
 
     window.open(
-      `https://api.whatsapp.com/send?phone=5571991889796&text=|*NOME*: ${form.nome}|*NUMERO*: ${form.contato}|*EMAIL*: ${form.email} |*ENDEREÇO*: ${form.endereco}|*TIPO DE IMÓVEL*: ${tipoImovel} |*NECESSIDADE TÉCNICA*: ${allNecessidadeTec} |*ÁREA DO TERRENO*: ${form.areaDoTerreno} |*TERRENO REGULARIZADO*: ${terrenoRegularizado} |*QUANTIDADE DE PAVIMENTOS*: ${form.quantidadeDePavimentos} - ${allTipoPavimento} |*TIPOS DE PROJETOS*: ${allTiposProjetos} |*MOTIVO DE PROCURA*: ${form.motivoDaProcura}`
+      `https://api.whatsapp.com/send?phone=5571991889796&text=*NOME*: ${form.nome}%0a*NUMERO*: ${form.contato}%0a*EMAIL*: ${form.email}%0a*ENDEREÇO*: ${form.endereco}%0a*TIPO DE IMÓVEL*: ${tipoImovel}%0a*NECESSIDADE TÉCNICA*: ${allNecessidadeTec} %0a*ÁREA DO TERRENO*: ${form.areaDoTerreno}m2 %0a*TERRENO REGULARIZADO*: ${terrenoRegularizado} %0a*QUANTIDADE DE PAVIMENTOS*: ${form.quantidadeDePavimentos} - ${allTipoPavimento} %0a*TIPOS DE PROJETOS*: ${allTiposProjetos} %0a*MOTIVO DE PROCURA*: ${form.motivoDaProcura}`
     )
   }
 
