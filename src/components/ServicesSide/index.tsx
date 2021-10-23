@@ -11,8 +11,8 @@ const ServicesSide = () => {
           <ContatoSvg />
         </p>
         <h5>Contato</h5>
-        <p>email@email.com</p>
-        <p>557599999999</p>
+        <p>fcs.engenharia@yahoo.com.br</p>
+        <p>+55 71 9188-9796</p>
         <p>
           Rua Campos Sales, 478 - Ponto Central Feira de Santana - BA, 44052-526
         </p>

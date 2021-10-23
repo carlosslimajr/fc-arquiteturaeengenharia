@@ -69,6 +69,7 @@ export const ServicesSideWrapper = styled.div`
       line-height: 54px;
       color: #982424;
     }
+
     button.button {
       width: 100%;
       margin: 0px auto;

@@ -1,3 +1,4 @@
+import CurrencyInput from 'react-currency-input-field'
 import Button from 'components/Button'
 import Checkbox from 'components/CheckBox/CheckBox'
 import Input from 'components/Input'
@@ -5,6 +6,7 @@ import Radio from 'components/Radio/Radio'
 import ServicesSide from 'components/ServicesSide'
 import React, { useState } from 'react'
 import { FormWrapper, RightSide } from '../Formulario/styles'
+import IntlCurrencyInput from 'react-intl-currency-input'
 
 const Briefing = () => {
   const [form, setForm] = useState({
@@ -31,22 +33,49 @@ const Briefing = () => {
   const [clima, setClima] = useState('')
   const [paletaCor, setPaletaCor] = useState('')
   const [stepper, setStepper] = useState(0)
-  const [value, setValue] = useState('')
+  const [valorPretendido, setValorPretendido] = useState('')
+
+  const currencyConfig = {
+    locale: 'pt-BR',
+    formats: {
+      number: {
+        BRL: {
+          style: 'currency',
+          currency: 'BRL',
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        }
+      }
+    }
+  }
+
+  function formatReal(int) {
+    let tmp = int + ''
+    tmp = tmp.replace(/([0-9]{2})$/g, ',$1')
+    if (tmp.length > 6) tmp = tmp.replace(/([0-9]{3}),([0-9]{2}$)/g, '.$1,$2')
+
+    return tmp
+  }
 
   function handleChange({ target }) {
-    const { id, value } = target
+    let { value } = target
+    const { id } = target
+
+    if (id === 'valorPretendido') {
+      value = formatReal(value)
+    }
     setForm({ ...form, [id]: value })
   }
 
   function handleClick(e) {
     e.preventDefault()
-    console.log('bateu aqui')
+
     const allPerfil = perfilCliente.join()
     const allAmbientes = ambientes.join()
     // const allTipoPavimento = tipoPavimento.join()
 
     window.open(
-      `https://api.whatsapp.com/send?phone=5575992604333&text=*PERFIL DO CLIENTE*:${allPerfil} / FAIXA ETÁRIA : ${form.faixaEtaria} / ESTILO: ${form.estilo} / INTERESSE POR ARTE : ${arte} /  PREFERÊNCIA MUSICAL: ${form.preferenciaMusical} / PREFERÊNCIA CINEMATOGRÁFICA: ${form.preferenciaCinematografica} / RELIGIOSO: ${religioso} / QUANTIDADE DE MORADORES: ${form.moradores} / ANIMAIS DOMÉSTICOS: ${form.animais} / HOBBIES PRATICADOS: ${form.hobbies} / COSTUMA RECEBER VISITAS : ${visita} / COSTUMA TRABALHAR EM CASA: ${trabalhaEmCasa} / POSSUI CRIANÇAS: ${form.criancas} / CORES DESEJADAS: ${form.cores} / ESTILO ARQUITETÔNICO ${form.estiloArquitetonico} / GOSTA DE PLANTAS : ${plantas} / PREFERE QUENTE OU FRIO: ${clima} / PALETA DE CORES : ${paletaCor} / VALOR PRETENDIDO: ${form.valorPretendido} / PRAZO PARA MUDANÇA ${form.prazoMudanca} / AMBIENTES : ${ambientes}`
+      `https://api.whatsapp.com/send?phone=5571991889796&text=|*PERFIL DO CLIENTE*: ${allPerfil} |*FAIXA ETÁRIA*: ${form.faixaEtaria} |*ESTILO*: ${form.estilo} |*INTERESSE POR ARTE*: ${arte} |*PREFERÊNCIA MUSICAL*: ${form.preferenciaMusical} |*PREFERÊNCIA CINEMATOGRÁFICA*: ${form.preferenciaCinematografica} |*RELIGIOSO*: ${religioso} |*QUANTIDADE DE MORADORES*: ${form.moradores} |*ANIMAIS DOMÉSTICOS*: ${form.animais} |*HOBBIES PRATICADOS*: ${form.hobbies} |*COSTUMA RECEBER VISITAS*: ${visita} |*COSTUMA TRABALHAR EM CASA*: ${trabalhaEmCasa} |*POSSUI CRIANÇAS*: ${form.criancas} |*CORES DESEJADAS*: ${form.cores} |*ESTILO ARQUITETÔNICO*:${form.estiloArquitetonico} |*GOSTA DE PLANTAS*: ${plantas} |*PREFERE QUENTE OU FRIO*: ${clima} |*PALETA DE CORES*: ${paletaCor} |*VALOR PRETENDIDO*: R$${valorPretendido} |*PRAZO PARA MUDANÇA*: ${form.prazoMudanca} |*AMBIENTES*: ${allAmbientes}`
     )
   }
 
@@ -62,6 +91,13 @@ const Briefing = () => {
     if (stepper < 1) {
       setStepper(stepper + 1)
     }
+  }
+
+  const handleChange2 = (event, value) => {
+    event.preventDefault()
+    setValorPretendido(
+      value.toLocaleString('pt-br', { minimumFractionDigits: 2 })
+    )
   }
 
   return (
@@ -86,7 +122,6 @@ const Briefing = () => {
         <form action="" className="col-12 col-lg-7">
           {stepper === 0 ? (
             <>
-              {' '}
               <h3>Informações Básicas</h3>
               <h5>Perfil do cliente:</h5>
               <div className="checkbox">
@@ -108,6 +143,7 @@ const Briefing = () => {
                 id="faixaEtaria"
                 value={form.faixaEtaria}
                 onChange={handleChange}
+                type="number"
               />
               <Input
                 label="Estilo:"
@@ -154,6 +190,7 @@ const Briefing = () => {
                 value={form.moradores}
                 id="moradores"
                 onChange={handleChange}
+                type="number"
               />
               <Input
                 label="Possui animais domésticos?"
@@ -191,6 +228,7 @@ const Briefing = () => {
                 value={form.criancas}
                 id="criancas"
                 onChange={handleChange}
+                type="number"
               />
               <Button width="100%" onClick={(e) => nextStep(e)}>
                 Próximo
@@ -225,7 +263,7 @@ const Briefing = () => {
               <h5>Prefere quente ou frio ?</h5>
               <div className="checkbox">
                 <Radio
-                  options={['Sim', 'Não']}
+                  options={['Quente', 'Frio']}
                   value={clima}
                   setValue={setClima}
                 />
@@ -238,13 +276,15 @@ const Briefing = () => {
                   setValue={setPaletaCor}
                 />
               </div>
-              <Input
-                label="Valor pretendido para investimento"
-                placeholder="R$ 10.123,56...."
-                value={form.valorPretendido}
-                id="valorPretendido"
-                onChange={handleChange}
-              />
+              <h5>Valor pretendido para investimento</h5>
+              <div className="input">
+                <IntlCurrencyInput
+                  currency="BRL"
+                  config={currencyConfig}
+                  onChange={handleChange2}
+                  value={valorPretendido}
+                />
+              </div>
               <Input
                 label="Prazo para mudança"
                 placeholder="30 dias..."

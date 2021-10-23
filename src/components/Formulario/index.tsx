@@ -4,8 +4,6 @@ import Input from 'components/Input'
 import Radio from 'components/Radio/Radio'
 import React, { useState } from 'react'
 import { FormWrapper, RightSide } from './styles'
-import InstaSvg from '../../../public/insta.svg'
-import ContatoSvg from '../../../public/contato.svg'
 import ServicesSide from 'components/ServicesSide'
 
 const Form = () => {
@@ -39,20 +37,16 @@ const Form = () => {
     const allTipoPavimento = tipoPavimento.join()
 
     window.open(
-      `https://api.whatsapp.com/send?phone=5575992604333&text=|*NOME*:${form.nome}/ *NUMERO*:${form.contato}/*EMAIL*:${form.email} /*ENDEREÇO*:${form.endereco}/*TIPO DE IMÓVEL*:${tipoImovel} /*NECESSIDADE TÉCNICA*:${allNecessidadeTec} /*ÁREA DO TERRENO*: ${form.areaDoTerreno} /*TERRENO REGULARIZADO*: ${terrenoRegularizado} /*QUANTIDADE DE PAVIMENTOS*: ${form.quantidadeDePavimentos} - ${allTipoPavimento} /*TIPOS DE PROJETOS*: ${allTiposProjetos} /*MOTIVO DE PROCURA*: ${form.motivoDaProcura}`
+      `https://api.whatsapp.com/send?phone=5571991889796&text=|*NOME*: ${form.nome}|*NUMERO*: ${form.contato}|*EMAIL*: ${form.email} |*ENDEREÇO*: ${form.endereco}|*TIPO DE IMÓVEL*: ${tipoImovel} |*NECESSIDADE TÉCNICA*: ${allNecessidadeTec} |*ÁREA DO TERRENO*: ${form.areaDoTerreno} |*TERRENO REGULARIZADO*: ${terrenoRegularizado} |*QUANTIDADE DE PAVIMENTOS*: ${form.quantidadeDePavimentos} - ${allTipoPavimento} |*TIPOS DE PROJETOS*: ${allTiposProjetos} |*MOTIVO DE PROCURA*: ${form.motivoDaProcura}`
     )
   }
 
   function handleChange({ target }) {
     const { id, value } = target
+
     setForm({ ...form, [id]: value })
   }
 
-  function handleCheckBox({ target }) {
-    // set
-    console.log('target heres')
-    console.log(target.value)
-  }
   return (
     <FormWrapper
       className="container"
@@ -79,24 +73,29 @@ const Form = () => {
             id="nome"
             value={form.nome}
             onChange={handleChange}
+            placeholder="Seu nome completo"
           />
           <Input
             label="Número de Contato:"
             id="contato"
             value={form.contato}
             onChange={handleChange}
+            mask={'(99) 99999-9999'}
+            placeholder="(12) 91234-5678"
           />
           <Input
             label="E-mail:"
             id="email"
             value={form.email}
             onChange={handleChange}
+            placeholder="seuemail@mail.com.br"
           />
           <Input
             label="Endereço:"
             id="endereco"
             value={form.endereco}
             onChange={handleChange}
+            placeholder="Rua, Avenida..."
           />
 
           <h3>Questões de uso</h3>
@@ -124,6 +123,8 @@ const Form = () => {
             id="areaDoTerreno"
             value={form.areaDoTerreno}
             onChange={handleChange}
+            placeholder="m2"
+            type="number"
           />
 
           <h5>Terreno regularizado:</h5>
@@ -139,6 +140,7 @@ const Form = () => {
             id="quantidadeDePavimentos"
             value={form.quantidadeDePavimentos}
             onChange={handleChange}
+            type="number"
           />
           <div className="checkbox row">
             <Checkbox
@@ -162,6 +164,7 @@ const Form = () => {
             id="motivoDaProcura"
             value={form.motivoDaProcura}
             onChange={handleChange}
+            placeholder="Conte para nós o motivo da procura"
           />
           <Button width="100%">Enviar</Button>
         </form>

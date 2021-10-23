@@ -11,6 +11,7 @@ export const ButtonWrapper = styled.button<ButtonProps>`
   justify-content: center;
   text-align: center;
   align-items: center;
+  flex-shrink: 0;
 
   border: none;
   color: white;
@@ -29,7 +30,7 @@ export const ButtonWrapper = styled.button<ButtonProps>`
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
   transition: all 0.2s;
-  max-width: 400px;
+  /* max-width: 400px; */
   &:hover {
     transform: scale(1.05);
     border-radius: 10px;

@@ -1,5 +1,6 @@
 import React from 'react'
 import { InputForm, InputError, InputWrapper } from './styles'
+import InputMask from 'react-input-mask'
 
 interface InputProps {
   id?: string
@@ -23,23 +24,27 @@ const Input: React.FC<any> = ({
   onBlur,
   placeholder,
   setValue,
+  mask,
   ...props
 }) => {
   return (
     <InputWrapper>
       <div>
         <label htmlFor={id}>{label}</label>
-        <InputForm
-          type={type}
-          id={id}
-          name={id}
-          value={value}
-          onChange={onChange}
-          onBlur={onBlur}
-          placeholder={placeholder}
-          setValue={setValue}
-          {...props}
-        />
+        <InputForm>
+          <InputMask
+            type={type}
+            id={id}
+            name={id}
+            value={value}
+            onChange={onChange}
+            onBlur={onBlur}
+            placeholder={placeholder}
+            setValue={setValue}
+            mask={mask}
+            {...props}
+          />
+        </InputForm>
         {error && <InputError>{error}</InputError>}
       </div>
     </InputWrapper>

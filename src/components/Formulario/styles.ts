@@ -23,6 +23,17 @@ export const FormWrapper = styled.main`
       color: black;
     }
   }
+  div.input {
+    margin-bottom: 2.4rem;
+    input {
+      display: flex;
+      width: 100%;
+      height: 64px;
+      border: 1px solid #ced4da;
+      box-sizing: border-box;
+      padding: 24px;
+    }
+  }
 
   .step {
     display: flex;

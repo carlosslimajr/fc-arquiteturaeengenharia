@@ -14,13 +14,15 @@ export const InputWrapper = styled.div`
     color: #982424;
   }
 `
-export const InputForm = styled.input`
-  display: flex;
-  width: 100%;
-  height: 64px;
-  border: 1px solid #ced4da;
-  box-sizing: border-box;
-  padding: 24px;
+export const InputForm = styled.div`
+  input {
+    display: flex;
+    width: 100%;
+    height: 64px;
+    border: 1px solid #ced4da;
+    box-sizing: border-box;
+    padding: 24px;
+  }
 `
 
 export const InputError = styled.span`
