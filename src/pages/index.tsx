@@ -14,7 +14,7 @@ export default function Home() {
         title="FC Arquitetura e Engenharia"
         desc="Escritorio de arquitetura e engenharia com diversas soluções residenciais, comerciais e industriais."
         url="https://www.fcarquiteturaeengenharia.com.br/"
-        keywords="arquitetura e engenharia decoração reforma obra projeto feira de santana fsa salvador"
+        keywords="FC arquitetura e engenharia decoração reforma obra projeto feira de santana fsa salvador construção casa interiores"
       />
       <Landing />
       <Costumer />
