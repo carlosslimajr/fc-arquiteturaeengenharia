@@ -3,7 +3,11 @@ import Briefing from 'components/Briefing'
 import React from 'react'
 
 const Brief = () => {
-  return <Briefing />
+  return (
+    <main>
+      <Briefing />
+    </main>
+  )
 }
 
 export default Brief
