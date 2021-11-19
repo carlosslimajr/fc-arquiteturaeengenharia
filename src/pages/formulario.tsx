@@ -9,7 +9,7 @@ const Formulario = () => {
         title="Formulário | FC Arquitetura e Engenharia"
         desc="Escritorio de arquitetura e engenharia com diversas soluções residenciais, comerciais e industriais."
         url="https://www.fcarquiteturaeengenharia.com.br/"
-        keywords="arquitetura decoração engenharia reforma obra projeto feira de santana"
+        keywords="arquitetura e engenharia decoração reforma obra projeto feira de santana fsa salvador"
       />
       <Form />
     </main>
