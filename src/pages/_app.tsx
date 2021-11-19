@@ -14,9 +14,6 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Head>
-          <link rel="shortcut icon" href="/short4.png" />
-        </Head>
         <GlobalStyles />
 
         {pathname === '/' && <Video />}

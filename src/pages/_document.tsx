@@ -41,8 +41,13 @@ export default class MyDocument extends Document {
       <Html lang="pt-BR">
         <Head>
           <meta name="theme-color" content="#FAF6ED" />
+          <link rel="shortcut icon" href="/favicon.png" type="image/png" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="true"
+          />
           <link
             href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
             rel="stylesheet"
