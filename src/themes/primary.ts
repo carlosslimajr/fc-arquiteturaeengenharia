@@ -10,7 +10,7 @@ export const theme = {
     success: '#2bff6b'
   },
   font: {
-    primary: 'Kanit, sans-serif',
-    secondary: 'Raleway, sans-serif'
+    primary: 'Prompt, sans-serif',
+    secondary: 'Kanit, sans-serif'
   }
 }

@@ -4,7 +4,7 @@ export const FooterWrapper = styled.footer`
   width: 100%;
   display: grid;
   padding: 60px 0px;
-  font-family: Prompt;
+  font-family: ${(props) => props.theme.font.primary};
   background: #faf6ed;
   img {
     margin-bottom: 30px;
@@ -35,7 +35,7 @@ export const FooterWrapper = styled.footer`
       }
     }
     .text {
-      font-family: Prompt;
+      font-family: ${(props) => props.theme.font.primary};
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
@@ -46,7 +46,7 @@ export const FooterWrapper = styled.footer`
     }
 
     h5 {
-      font-family: Prompt;
+      font-family: ${(props) => props.theme.font.primary};
       font-style: normal;
       font-weight: 600;
       font-size: 16px;
@@ -61,7 +61,7 @@ export const FooterWrapper = styled.footer`
       li {
         color: #34344f;
         margin-right: 25px;
-        font-family: Prompt;
+        font-family: ${(props) => props.theme.font.primary};
         font-style: normal;
         font-weight: normal;
         margin-bottom: 16px;

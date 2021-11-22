@@ -6,7 +6,7 @@ export const LandingWrapper = styled.section`
   margin-bottom: 10rem;
 
   h1 {
-    font-family: Prompt;
+    font-family: ${(props) => props.theme.font.primary};
     font-style: normal;
     font-weight: bold;
     font-size: 32px;
@@ -20,7 +20,7 @@ export const LandingWrapper = styled.section`
     margin-right: auto;
   }
   p {
-    font-family: Prompt;
+    font-family: ${(props) => props.theme.font.primary};
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -45,7 +45,7 @@ export const LandingWrapper = styled.section`
     }
 
     h1 {
-      font-family: Prompt;
+      font-family: ${(props) => props.theme.font.primary};
       font-style: normal;
       font-weight: bold;
       font-size: 48px;
@@ -56,7 +56,7 @@ export const LandingWrapper = styled.section`
     }
 
     p {
-      font-family: Prompt;
+      font-family: ${(props) => props.theme.font.primary};
       font-style: normal;
       font-weight: normal;
       font-size: 18px;

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Title = styled.h2`
-  font-family: Prompt;
+  font-family: ${(props) => props.theme.font.primary};
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
@@ -9,7 +9,7 @@ export const Title = styled.h2`
   color: #982424;
 
   @media (max-width: 991px) {
-    font-family: Prompt;
+    font-family: ${(props) => props.theme.font.primary};
     font-style: normal;
     font-weight: bold;
     font-size: 32px;
@@ -20,7 +20,7 @@ export const Title = styled.h2`
 `
 
 export const Subtitle = styled.p`
-  font-family: Prompt;
+  font-family: ${(props) => props.theme.font.primary};
   font-style: normal;
   font-weight: normal;
   font-size: 18px;

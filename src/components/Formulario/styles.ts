@@ -54,7 +54,7 @@ export const FormWrapper = styled.main`
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: Prompt;
+      font-family: ${(props) => props.theme.font.primary};
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
@@ -93,7 +93,7 @@ export const FormWrapper = styled.main`
       }
     }
     h1 {
-      font-family: Prompt;
+      font-family: ${(props) => props.theme.font.primary};
       font-style: normal;
       font-weight: bold;
       font-size: 3.2rem;
@@ -106,7 +106,7 @@ export const FormWrapper = styled.main`
       margin-bottom: 2.4rem;
     }
     p {
-      font-family: Prompt;
+      font-family: ${(props) => props.theme.font.primary};
       font-style: normal;
       font-weight: normal;
       font-size: 18px;
@@ -117,7 +117,7 @@ export const FormWrapper = styled.main`
     }
   }
   h3 {
-    font-family: Prompt;
+    font-family: ${(props) => props.theme.font.primary};
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
@@ -131,7 +131,7 @@ export const FormWrapper = styled.main`
     }
   }
   h5 {
-    font-family: Prompt;
+    font-family: ${(props) => props.theme.font.primary};
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -153,7 +153,7 @@ export const FormWrapper = styled.main`
       height: 24px;
     }
     label {
-      font-family: Prompt;
+      font-family: ${(props) => props.theme.font.primary};
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
@@ -192,7 +192,7 @@ export const RightSide = styled.div`
     }
 
     h5 {
-      font-family: Prompt;
+      font-family: ${(props) => props.theme.font.primary};
       font-style: normal;
       font-weight: 600;
       font-size: 24px;
@@ -202,7 +202,7 @@ export const RightSide = styled.div`
     }
     p {
       margin-bottom: 24px;
-      font-family: Prompt;
+      font-family: ${(props) => props.theme.font.primary};
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
@@ -230,7 +230,7 @@ export const RightSide = styled.div`
     h4 {
       margin: 0 auto;
       margin-bottom: 32px;
-      font-family: Prompt;
+      font-family: ${(props) => props.theme.font.primary};
       font-style: normal;
       font-weight: bold;
       font-size: 36px;
@@ -242,7 +242,7 @@ export const RightSide = styled.div`
       margin: 40px auto;
       background: #faf6ed;
       border: 1px solid #982424;
-      font-family: Prompt;
+      font-family: ${(props) => props.theme.font.primary};
       font-style: normal;
       font-weight: 600;
       font-size: 18px;
@@ -259,7 +259,7 @@ export const RightSide = styled.div`
       margin: 0 auto;
       margin-bottom: 4rem;
       h5 {
-        font-family: Prompt;
+        font-family: ${(props) => props.theme.font.primary};
         font-style: normal;
         font-weight: 600;
         font-size: 22px;

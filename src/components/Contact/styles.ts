@@ -43,7 +43,7 @@ export const ContactWrapper = styled.div`
       height: auto;
     }
     h3 {
-      font-family: Prompt;
+      font-family: ${(props) => props.theme.font.primary};
       font-style: normal;
       font-weight: bold;
       font-size: 32px;
@@ -54,7 +54,7 @@ export const ContactWrapper = styled.div`
       }
     }
     p {
-      font-family: Prompt;
+      font-family: ${(props) => props.theme.font.primary};
       font-style: normal;
       font-weight: 600;
       font-size: 18px;

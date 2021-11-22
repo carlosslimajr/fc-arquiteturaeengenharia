@@ -31,7 +31,7 @@ export const AboutWrapper = styled.section`
     }
   }
   p {
-    font-family: Prompt;
+    font-family: ${(props) => props.theme.font.primary};
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -40,7 +40,7 @@ export const AboutWrapper = styled.section`
     text-align: left;
   }
   .bold {
-    font-family: Prompt;
+    font-family: ${(props) => props.theme.font.primary};
     font-style: normal;
     font-weight: 600;
     font-size: 18px;

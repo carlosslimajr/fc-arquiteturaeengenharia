@@ -19,7 +19,7 @@ export const ButtonWrapper = styled.button<ButtonProps>`
   height: ${(props) => (props.height ? props.height : '60px')};
   background-color: ${(props) =>
     props.background ? props.background : '#982424'};
-  font-family: Prompt;
+  font-family: ${(props) => props.theme.font.primary};
   font-style: normal;
   font-weight: bold;
   font-size: 16px;

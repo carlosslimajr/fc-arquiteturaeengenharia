@@ -19,9 +19,18 @@ const GlobalStyles = createGlobalStyle`
     font-weight: 400;
     font-size: 1.6rem;
     min-height: 100vh;
-    font-family: 'Prompt','Courier New', Courier, monospace;
+    font-family: 'Prompt','sans-serif', Courier, monospace;
 
   }
+  body,
+    input,
+    button,
+    textarea,
+    select {
+        font-weight: 400;
+        font-size: 1.6rem;
+        font-family: ${(props) => props.theme.font.primary};
+    }
 
 
   img {

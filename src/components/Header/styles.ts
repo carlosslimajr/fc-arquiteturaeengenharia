@@ -57,7 +57,7 @@ export const HeaderWrapper = styled.header`
       background-clip: content-box, border-box;
       text-decoration: none;
 
-      font-family: Prompt;
+      font-family: ${(props) => props.theme.font.primary};
       font-style: normal;
       font-weight: normal;
       font-size: 18px;

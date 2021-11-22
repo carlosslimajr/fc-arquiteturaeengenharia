@@ -16,7 +16,7 @@ export const ServicesWrapper = styled.section`
     margin-bottom: 2.5rem;
   }
   h4 {
-    font-family: Prompt;
+    font-family: ${(props) => props.theme.font.primary};
     font-style: normal;
     font-weight: 600;
     font-size: 22px;
@@ -25,7 +25,7 @@ export const ServicesWrapper = styled.section`
     margin-bottom: 1.2rem;
   }
   p {
-    font-family: Prompt;
+    font-family: ${(props) => props.theme.font.primary};
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -83,7 +83,7 @@ export const ServicesWrapper = styled.section`
   }
   .counter {
     margin-top: 1.4rem;
-    font-family: Prompt;
+    font-family: ${(props) => props.theme.font.primary};
     font-style: normal;
     font-weight: 500;
     font-size: 18px;

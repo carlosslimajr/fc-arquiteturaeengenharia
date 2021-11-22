@@ -36,7 +36,7 @@ export const BannerWrapper = styled.div`
   }
 
   p {
-    font-family: Prompt;
+    font-family: ${(props) => props.theme.font.primary};
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
@@ -46,7 +46,7 @@ export const BannerWrapper = styled.div`
     margin-bottom: 3rem;
 
     @media (max-width: 992px) {
-      font-family: Prompt;
+      font-family: ${(props) => props.theme.font.primary};
       font-style: normal;
       font-weight: 600;
       font-size: 19px;
@@ -66,7 +66,7 @@ export const BannerWrapper = styled.div`
     p {
       width: 80%;
       margin: 0 auto;
-      font-family: Prompt;
+      font-family: ${(props) => props.theme.font.primary};
       font-style: normal;
       font-weight: 600;
       font-size: 32px;

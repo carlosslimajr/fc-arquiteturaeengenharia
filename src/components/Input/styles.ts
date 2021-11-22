@@ -5,7 +5,7 @@ export const InputWrapper = styled.div`
   margin-bottom: 24px;
 
   label {
-    font-family: Prompt;
+    font-family: ${(props) => props.theme.font.primary};
     font-style: normal;
     font-weight: 500;
     font-size: 18px;

@@ -23,7 +23,7 @@ export const ServicesSideWrapper = styled.div`
     }
 
     h5 {
-      font-family: Prompt;
+      font-family: ${(props) => props.theme.font.primary};
       font-style: normal;
       font-weight: 600;
       font-size: 24px;
@@ -33,7 +33,7 @@ export const ServicesSideWrapper = styled.div`
     }
     p {
       margin-bottom: 24px;
-      font-family: Prompt;
+      font-family: ${(props) => props.theme.font.primary};
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
@@ -62,7 +62,7 @@ export const ServicesSideWrapper = styled.div`
     h4 {
       margin: 0 auto;
       margin-bottom: 32px;
-      font-family: Prompt;
+      font-family: ${(props) => props.theme.font.primary};
       font-style: normal;
       font-weight: bold;
       font-size: 36px;
@@ -75,7 +75,7 @@ export const ServicesSideWrapper = styled.div`
       margin: 0px auto;
       background: #faf6ed;
       border: 1px solid #982424;
-      font-family: Prompt;
+      font-family: ${(props) => props.theme.font.primary};
       font-style: normal;
       font-weight: 600;
       font-size: 18px;
@@ -100,7 +100,7 @@ export const ServicesSideWrapper = styled.div`
       margin-bottom: 4rem;
 
       h5 {
-        font-family: Prompt;
+        font-family: ${(props) => props.theme.font.primary};
         font-style: normal;
         font-weight: 600;
         font-size: 22px;
