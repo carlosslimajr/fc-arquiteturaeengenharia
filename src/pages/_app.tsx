@@ -7,7 +7,6 @@ import GlobalStyles from 'styles/global'
 import { theme } from 'themes/primary'
 import Video from 'components/Video'
 import { useRouter } from 'next/router'
-import Head from 'next/head'
 
 function App({ Component, pageProps }: AppProps) {
   const { pathname } = useRouter()

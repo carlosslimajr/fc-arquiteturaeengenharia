@@ -26,7 +26,7 @@ const Services: React.FC = () => {
     fullhd: {
       breakpoint: { max: 2000, min: 1280 },
       items: 1,
-      partialVisibilityGutter: 520 // this is needed to tell the amount of px that should be visible.
+      partialVisibilityGutter: 400 // this is needed to tell the amount of px that should be visible.
     },
     tablet: {
       breakpoint: { max: 1279, min: 465 },

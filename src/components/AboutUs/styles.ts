@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const AboutWrapper = styled.div`
+export const AboutWrapper = styled.section`
   margin-bottom: 9.6rem !important;
   position: relative;
   img {

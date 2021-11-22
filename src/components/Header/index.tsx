@@ -1,8 +1,7 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { HeaderWrapper } from './styles'
-// import logo from 'assets/logo.png';
 import useMediaQuery from 'hooks/useMediaQuery'
 import Button from 'components/Button/'
 import MobileLogo from '../../assets/svg/logomobile.svg'
@@ -15,8 +14,8 @@ import Image from 'next/image'
 const Header = () => {
   const [mobileHeader, setMobileHeader] = useState<boolean>(false)
   const mobile = useMediaQuery('(max-width: 991px)')
-  const { pathname, push } = useRouter()
-  const linkRef = useRef<HTMLAnchorElement>(null)
+  const { pathname } = useRouter()
+  // const linkRef = useRef<HTMLAnchorElement>(null)
 
   useEffect(() => {
     setMobileHeader(false)
@@ -61,10 +60,12 @@ const Header = () => {
         <h5>
           <Image
             src="/logo-topo.png"
-            alt="Foto exemplo"
+            alt="Logo FC Arquitetura e Engenharia"
             width="110px"
             height="92px"
             className="imagi"
+            placeholder="blur"
+            blurDataURL="/logo-topo.png"
           />
         </h5>
 
@@ -89,7 +90,7 @@ const Header = () => {
                 </li>
               </ul>
             </nav>
-            <Link href="/formulario">
+            <Link href="/formulario" passHref>
               <Button>PEÇA UM ORÇAMENTO</Button>
             </Link>
           </>
@@ -125,50 +126,37 @@ const Header = () => {
               animate="visible"
               variants={nav}
             >
-              <Link href="/#inicio">
+              <Link href="/#inicio" passHref>
                 <motion.a
                   variants={items}
-                  // style={{ fontWeight: pathname === '/sobre' && 700 }}
                   onClick={handleClick}
                   className="gradient-box"
                 >
                   Inicio <RightArrow />
                 </motion.a>
               </Link>
-              <Link href="/#sobre">
+              <Link href="/#sobre" passHref>
                 <motion.a
                   variants={items}
-                  // style={{ fontWeight: pathname === '/parceiros' && 700 }}
                   className="gradient-box"
                   onClick={handleClick}
                 >
                   Quem somos <RightArrow />
                 </motion.a>
               </Link>
-              <Link href="/#servicos">
+              <Link href="/#servicos" passHref>
                 <motion.a
                   variants={items}
-                  // style={{ fontWeight: pathname === '/parceiros' && 700 }}
                   className="gradient-box"
                   onClick={handleClick}
                 >
                   Nossos serviços <RightArrow />
                 </motion.a>
               </Link>
-              {/* <Link href="/#clientes">
+
+              <Link href="#trabalhe" passHref>
                 <motion.a
                   variants={items}
-                  // style={{ fontWeight: pathname === '/parceiros' && 700 }}
-                  className="gradient-box"
-                  onClick={handleClick}
-                >
-                  Clientes <RightArrow />
-                </motion.a>
-              </Link> */}
-              <Link href="#trabalhe">
-                <motion.a
-                  variants={items}
-                  // style={{ fontWeight: pathname === '/parceiros' && 700 }}
                   className="gradient-box"
                   onClick={handleClick}
                 >

@@ -7,12 +7,12 @@ import Services from 'components/Services'
 
 export default function Home() {
   return (
-    <main>
+    <main id="main">
       <SeoComponent
         title="FC Arquitetura e Engenharia"
         desc="Escritorio de arquitetura e engenharia com diversas soluções residenciais, comerciais e industriais."
         url="https://www.fcarquiteturaeengenharia.com.br/"
-        keywords="FC arquitetura e engenharia decoração reforma obra projeto feira de santana fsa salvador construção casa interiores"
+        keywords="FC arquitetura e engenharia, decoração, reforma, obra, projeto, feira de santana, fsa, salvador, construção, casa, interiores, FCARQUITETURAEENGENHARIA, FC, arquitetura, engenharia"
       />
       <Landing />
       <Costumer />

@@ -1,6 +1,4 @@
-import { Title } from 'components/commonStyles'
 import React from 'react'
-
 interface TextProps {
   subtitle?: string
   text?: string

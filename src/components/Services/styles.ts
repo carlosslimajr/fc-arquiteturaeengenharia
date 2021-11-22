@@ -1,7 +1,7 @@
 // import { inputStyleCSS } from 'components/commonStyles';
 import styled from 'styled-components'
 
-export const ServicesWrapper = styled.div`
+export const ServicesWrapper = styled.section`
   background: #faf6ed;
   height: auto;
   display: flex;
@@ -10,6 +10,7 @@ export const ServicesWrapper = styled.div`
   margin-top: 5.6rem;
   padding-bottom: 5rem;
   padding-top: 6.8rem;
+
   h2 {
     text-align: left;
     margin-bottom: 2.5rem;

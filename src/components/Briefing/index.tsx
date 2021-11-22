@@ -1,11 +1,10 @@
-import CurrencyInput from 'react-currency-input-field'
 import Button from 'components/Button'
 import Checkbox from 'components/CheckBox/CheckBox'
 import Input from 'components/Input'
 import Radio from 'components/Radio/Radio'
 import ServicesSide from 'components/ServicesSide'
 import React, { useState } from 'react'
-import { FormWrapper, RightSide } from '../Formulario/styles'
+import { FormWrapper } from '../Formulario/styles'
 import IntlCurrencyInput from 'react-intl-currency-input'
 
 const Briefing = () => {
@@ -79,12 +78,13 @@ const Briefing = () => {
     )
   }
 
-  const prevStep = (e: any) => {
-    if (stepper !== 0) {
-      setStepper(stepper - 1)
-    }
-  }
-  const nextStep = (e: any) => {
+  // const prevStep = (e: any) => {
+  //   if (stepper !== 0) {
+  //     setStepper(stepper - 1)
+  //   }
+  // }
+
+  const nextStep = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
     // alert('bateu aqui')
     window.scrollTo(0, 0)

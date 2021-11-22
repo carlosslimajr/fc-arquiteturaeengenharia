@@ -3,22 +3,6 @@ import { BannerWrapper } from './styles'
 import houseIcon from 'assets/house-icon.png'
 import { motion } from 'framer-motion'
 
-const wrapper = {
-  visible: {
-    opacity: 1,
-    transition: {
-      when: 'beforeChildren',
-      staggerChildren: 0.3
-    }
-  },
-  hidden: { opacity: 0 }
-}
-
-const items = {
-  visible: { opacity: 1, x: 0 },
-  hidden: { opacity: 0, x: -100 }
-}
-
 const Banner = () => {
   const [isCardsSectionCardsVisible, setIsCardsSectionVisible] =
     useState<boolean>(false)
@@ -26,7 +10,7 @@ const Banner = () => {
 
   const getSectionPosition = useCallback(() => {
     const { y } = cardsSectionRef.current?.getBoundingClientRect()
-    const elementPosition = cardsSectionRef.current?.offsetTop
+    // const elementPosition = cardsSectionRef.current?.offsetTop
     if (y <= 700) {
       setIsCardsSectionVisible(true)
     }

@@ -1,10 +1,7 @@
-import { useRouter } from 'next/router'
-import Link from 'next/link'
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import { CostumersWrapper } from './styles'
-import logo from 'assets/logo.png'
 import { Subtitle, Title } from 'components/commonStyles'
 import pirao from 'assets/costumers/pirao.png'
 import vogue from 'assets/costumers/vogue.png'
@@ -21,7 +18,7 @@ import aloha from 'assets/costumers/aloha.png'
 import { motion } from 'framer-motion'
 
 const Costumer: React.FC = () => {
-  const clienteRef = React.useRef(null)
+  // const clienteRef = React.useRef(null)
 
   const responsive = {
     fullhd: {

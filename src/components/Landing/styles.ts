@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const LandingWrapper = styled.div`
+export const LandingWrapper = styled.section`
   height: 48rem;
   position: relative;
   margin-bottom: 10rem;

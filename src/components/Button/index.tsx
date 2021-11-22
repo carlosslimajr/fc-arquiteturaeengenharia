@@ -6,7 +6,7 @@ interface ButtonProps {
   background?: string
   height?: string
   color?: string
-  onClick?: (e: any) => void
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
 
 const Button: React.FC<ButtonProps> = ({ children, ...props }) => {

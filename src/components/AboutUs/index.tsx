@@ -5,22 +5,6 @@ import AboutPic from '../../assets/about.webp'
 import useMediaQuery from 'hooks/useMediaQuery'
 import { motion } from 'framer-motion'
 
-const wrapper = {
-  visible: {
-    opacity: 1,
-    transition: {
-      when: 'beforeChildren',
-      staggerChildren: 0.3
-    }
-  },
-  hidden: { opacity: 0 }
-}
-
-const items = {
-  visible: { opacity: 1, x: 0 },
-  hidden: { opacity: 0, x: -100 }
-}
-
 const AboutUs: React.FC = () => {
   const mobile = useMediaQuery('(max-width: 991px)')
 

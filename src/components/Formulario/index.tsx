@@ -3,7 +3,7 @@ import Checkbox from 'components/CheckBox/CheckBox'
 import Input from 'components/Input'
 import Radio from 'components/Radio/Radio'
 import React, { useState } from 'react'
-import { FormWrapper, RightSide } from './styles'
+import { FormWrapper } from './styles'
 import ServicesSide from 'components/ServicesSide'
 
 const Form = () => {
@@ -29,7 +29,7 @@ const Form = () => {
   const [tiposDeProjetos, setTiposDeProjetos] = React.useState([])
   // const [cor, setCor] = React.useState('')
 
-  function handleClick(e) {
+  function handleClick(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault()
     console.log('bateu aqui')
     const allTiposProjetos = tiposDeProjetos.join()

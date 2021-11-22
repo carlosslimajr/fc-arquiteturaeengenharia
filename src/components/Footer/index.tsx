@@ -1,15 +1,9 @@
-import { useRouter } from 'next/router'
-import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { FooterWrapper } from './styles'
-// import logo from 'assets/logo.png'
-import Button from 'components/Button/'
 import Contact from 'components/Contact'
 import Image from 'next/image'
 import InstaSvg from '../../../public/insta.svg'
 const Footer = () => {
-  const router = useRouter()
-
   return (
     <>
       <Contact />

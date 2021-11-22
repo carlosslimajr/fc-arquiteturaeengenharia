@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const CostumersWrapper = styled.div`
+export const CostumersWrapper = styled.section`
   margin-bottom: 18rem;
   @media (max-width: 992px) {
     margin-top: 8rem !important;
