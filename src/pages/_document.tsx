@@ -41,6 +41,10 @@ export default class MyDocument extends Document {
       <Html lang="pt-BR">
         <Head>
           <meta name="theme-color" content="#FAF6ED" />
+          <meta
+            name="google-site-verification"
+            content="D8ylCOyHlZWnuNrKfPf0xMPppnf367XQldXv2lmdrJY"
+          />
           <link rel="shortcut icon" href="/favicon.png" type="image/png" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
