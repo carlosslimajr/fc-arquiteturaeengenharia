@@ -29,7 +29,7 @@ const Form = () => {
   const [tiposDeProjetos, setTiposDeProjetos] = React.useState([])
   // const [cor, setCor] = React.useState('')
 
-  function handleClick(e: React.MouseEvent<HTMLButtonElement>) {
+  function handleClick(e) {
     e.preventDefault()
     console.log('bateu aqui')
     const allTiposProjetos = tiposDeProjetos.join()

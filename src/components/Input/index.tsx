@@ -14,7 +14,7 @@ import InputMask from 'react-input-mask'
 //   setValue?: string
 // }
 
-const Input = ({
+const Input: React.FC<any> = ({
   id,
   label,
   value,
