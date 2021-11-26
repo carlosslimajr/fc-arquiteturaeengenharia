@@ -27,7 +27,7 @@ const Landing = () => {
               Alinhados na melhor técnica e no menor custo possível para sua
               família ou seu negócio!
             </p>
-            <Link href="/formulario" passHref>
+            <Link href="/orcamento" passHref>
               <Button>Peça um orçamento</Button>
             </Link>
           </div>
