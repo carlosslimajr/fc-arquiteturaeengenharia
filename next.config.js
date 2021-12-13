@@ -8,15 +8,43 @@ const withPlugins = require('next-compose-plugins')
 const withPWA = nextPWA({
   pwa: {
     dest: 'public',
-    disable: process.env.NODE_ENV === 'development',
+    // disable: process.env.NODE_ENV === 'development',
     runtimeCaching
   }
 })
 
-module.exports = withImages({
-  esModule: true,
-  images: {
-    disableStaticImages: true
-  },
-  withPWA
-})
+// module.exports = withPlugins([
+//   [
+//     withImages,
+//     {
+//       esModule: true,
+//       images: {
+//         disableStaticImages: true
+//       }
+//     }
+//   ],
+//   nextPWA,
+//   {
+//     dest: 'public',
+//     runtimeCaching
+//   }
+// ])
+
+module.exports = withPlugins([
+  [
+    withImages,
+    {
+      esModule: true,
+      images: {
+        disableStaticImages: true
+      }
+    }
+  ],
+  [
+    nextPWA,
+    {
+      dest: 'public',
+      runtimeCaching
+    }
+  ]
+])
