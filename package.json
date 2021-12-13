@@ -21,6 +21,7 @@
     "next": "11.1.2",
     "next-compose-plugins": "^2.2.1",
     "next-images": "^1.8.1",
+    "next-pwa": "^5.4.4",
     "react": "17.0.2",
     "react-currency-input-field": "^3.5.1",
     "react-dom": "17.0.2",

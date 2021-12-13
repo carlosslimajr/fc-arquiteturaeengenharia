@@ -1,0 +1,15 @@
+{
+  "name": "FC Arquitetura e Engenharia",
+  "short_name": "FC",
+  "theme_color": "#d7b56d",
+  "background_color": "#d7b56d",
+  "display": "standalone",
+  "description": "",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [{
+    "src": "/favicon.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }]
+}
