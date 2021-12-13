@@ -5,8 +5,8 @@
   "background_color": "#d7b56d",
   "display": "standalone",
   "description": "",
-  "scope": "https://www.fcarquiteturaeengenharia.com.br/",
-  "start_url": "https://www.fcarquiteturaeengenharia.com.br/",
+  "scope": "",
+  "start_url": "/",
   "icons": [{
     "src": "/mini-logo.png",
     "sizes": "144x144",

@@ -43,8 +43,10 @@ module.exports = withPlugins([
   [
     nextPWA,
     {
-      dest: 'public',
-      runtimeCaching
+      pwa: {
+        dest: 'public',
+        runtimeCaching
+      }
     }
   ]
 ])
